@@ -1,0 +1,105 @@
+---
+title: '4.1 Sub-agentes y skills | Clase 4'
+description: 'Crear sub-agentes permanentes con distintas perspectivas (tu consejo asesor) y skills reutilizables en Claude Code.'
+keywords: 'claude code sub agentes español, claude code skills, agentes personalizados ia, consejo asesor ia'
+---
+
+## 4.1 · Sub-agentes y skills
+
+- **Tiempo:** 20 minutos
+
+> **Lección interactiva:** escribí `/clase-4-1` en Claude Code
+
+## Agentes vs sub-agentes
+
+En la Clase 2 usaste agentes para procesar en paralelo. Los sub-agentes son otra cosa:
+
+| | Agentes (Clase 2) | Sub-agentes (esta lección) |
+|---|---|---|
+| **Duración** | Temporales: nacen, procesan, chau | Permanentes: siempre disponibles |
+| **Para qué** | Volumen, procesamiento en lote | Criterio, perspectivas, feedback |
+| **Analogía** | "10 pasantes procesando archivos" | "Un consejo asesor revisando tu estrategia" |
+
+## Tu consejo asesor
+
+La idea: crear personajes permanentes, cada uno con una mirada distinta, y llamarlos cuando necesitás feedback. Como tener un directorio propio, pero que atiende a las 3 de la mañana.
+
+Para Butaca, por ejemplo:
+
+- **La Editora Brutal**: lee tus borradores como la editora más exigente que tuviste
+- **El Lector Distraído**: si él no entiende el título, nadie lo entiende
+- **La Directora de Cimarrón**: solo le importa si esto trae lectores y cuánto cuesta
+
+## Cómo funcionan
+
+Los sub-agentes son archivos de texto en la carpeta `.claude/agents/`. Cada archivo tiene un encabezado (nombre y descripción) y un prompt de sistema (la personalidad):
+
+```markdown
+---
+name: editora-brutal
+description: Edita textos con vara altísima y cero piedad
+---
+
+Sos una editora con 25 años de experiencia en medios argentinos.
+Leés cada borrador buscando: frases flojas, datos sin fuente,
+títulos aburridos, primeros párrafos que no enganchan.
+Sos dura pero constructiva: cada crítica viene con una sugerencia.
+```
+
+Son archivos comunes: los podés ver, editar y mejorar con el tiempo.
+
+## Cómo se usan
+
+Los nombrás en el pedido y responden en personaje:
+
+```
+Que la editora-brutal revise @borradores/nota-incaa.md
+```
+
+```
+Quiero el feedback de los tres sub-agentes sobre esta propuesta
+```
+
+## Cómo crear los tuyos
+
+El comando `/agents` te guía:
+
+1. Elegí **Project** (solo este proyecto) o **Personal** (todos tus proyectos)
+2. Describí la perspectiva que querés y Claude arma el archivo
+
+O directamente: *"Creame un sub-agente que sea un abogado paranoico revisando riesgos legales"*.
+
+## Consejos asesores según tu mundo
+
+| Situación | Sub-agentes |
+|-----------|-------------|
+| **Revisar tu CV** | Reclutadora + Jefe que contrata + Coach de carrera |
+| **Idea de emprendimiento** | Inversora escéptica + Cliente objetivo + Realista |
+| **Presentación importante** | Ejecutivo apurado + Analista detallista + Escéptico |
+| **Escritura** | Editora + Lector objetivo + Crítico feroz |
+| **Paper académico** | Revisor 2 (el malo) + Metodóloga + Lector no especialista |
+
+## Y las skills
+
+Las **skills** son la otra pieza de personalización: instrucciones empaquetadas que le enseñan a Claude a hacer una tarea específica a tu manera, con tus pasos y tus criterios. Si el sub-agente es "quién revisa", la skill es "cómo se hace".
+
+Se guardan en `.claude/skills/` y se invocan como comandos. La forma más simple de crear una:
+
+```
+Creame una skill /informe-incaa que tome un CSV del INCAA, lo analice
+con los criterios que usamos en Butaca y genere el informe con nuestra
+plantilla
+```
+
+En la próxima lección las usamos para automatizar tu rutina real.
+
+## Recursos
+
+- [Documentación oficial de sub-agentes](https://docs.anthropic.com/en/docs/claude-code/sub-agents)
+- [Colección comunitaria de sub-agentes](https://github.com/VoltAgent/awesome-claude-code-subagents)
+
+---
+
+## Siguiente lección
+
+**[4.2 · Automatizar tu rutina →](/clase-4/automatizar-tu-rutina)**: que lo repetitivo se haga solo.

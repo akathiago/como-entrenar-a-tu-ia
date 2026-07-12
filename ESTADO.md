@@ -18,7 +18,7 @@ Material complementario del taller "Cómo entrenar a tu IA" (Claude Code para no
 - [x] Unidad 2: Clase 1 · COMPRENDER (pages/clase-1/: index + 4 lecciones). Escenario Cimarrón/Butaca presentado en 1.1 y en el index de la clase. Carpeta de materiales referida como `caos-heredado/` (nombre a respetar en unidad 9).
 - [x] Unidad 3: Clase 2 · EXPERIMENTAR (pages/clase-2/: index + los-5-patrones + agentes-en-paralelo + ejercicios-por-vertical). Nuevo archivo de práctica referido: `caos-heredado/estrenos-incaa.csv` y `plantillas/resumen-prensa.md` (crear en unidad 9). Comandos /clase-2-1 a /clase-2-3.
 - [x] Unidad 4: Clase 3 · PUBLICAR (pages/clase-3/: index + planificar + construir-e-iterar + github + deploy). Proyecto narrativo: quiz "¿Qué clásico del cine argentino sos?" (con opción de proyecto propio). Archivo de requisitos: `REQUISITOS.md`. Comandos /clase-3-1 a /clase-3-4.
-- [ ] Unidad 5: Clase 4 · POTENCIAR+MOSTRAR (pages/clase-4/)
+- [x] Unidad 5: Clase 4 · POTENCIAR+MOSTRAR (pages/clase-4/: index + sub-agentes-y-skills + automatizar-tu-rutina + mostrar-lo-construido). Incluye formato de demo final (3 min), MCP y browser automation presentados a nivel conceptual. Comandos /clase-4-1 a /clase-4-3.
 - [ ] Unidad 6: Las 5 verticales (pages/verticales/)
 - [ ] Unidad 7: Preguntas frecuentes (pages/faq.mdx)
 - [ ] Unidad 8: Recursos / recap por clase (pages/recursos/)
@@ -59,7 +59,7 @@ Recursos                  → recap por clase, cheat sheet, glosario
 
 ## Próximo paso concreto
 
-**Unidad 5: escribir pages/clase-4/ (POTENCIAR+MOSTRAR)** con index + 3 páginas: sub-agentes-y-skills (fuentes: `git show cbb7599:pages/fundamentals/custom-subagents.mdx` y `whats-next.mdx`), automatizar-tu-rutina (comandos propios + hooks livianos + scheduled/loop conceptual, contenido mayormente nuevo), mostrar-lo-construido (nuevo: cómo presentar el proyecto, checklist de demo, a dónde seguir). Agregar "clase-4" a pages/_meta.ts. Commit al terminar.
+**Unidad 6: escribir pages/verticales/** (index + 5 guías, una por vertical). Fuentes útiles del original: `git show cbb7599:pages/guides/claude-code-for-data-analysts.mdx`, `claude-code-for-researchers.mdx`, `claude-code-for-writers.mdx` (son largas, 20KB c/u: tomar estructura e ideas, NO traducir entero; apuntar a guías de ~150 líneas). Cada guía: para quién es, 3 casos concretos con prompts, un mini-proyecto sugerido, límites honestos. Agregar "verticales" a pages/_meta.ts. Commit al terminar.
 
 ## Convenciones fijadas (respetar en todo el contenido)
 

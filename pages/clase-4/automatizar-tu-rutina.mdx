@@ -1,0 +1,74 @@
+---
+title: '4.2 Automatizar tu rutina | Clase 4'
+description: 'Convertir tareas repetitivas en comandos propios de Claude Code: monitoreo de prensa, informes recurrentes, conexiones con otras apps vía MCP.'
+keywords: 'claude code automatizacion, claude code comandos personalizados, claude code mcp, automatizar tareas repetitivas ia'
+---
+
+## 4.2 · Automatizar tu rutina
+
+- **Tiempo:** 20 minutos
+
+> **Lección interactiva:** escribí `/clase-4-2` en Claude Code
+
+## La pregunta que ordena todo
+
+**¿Qué hacés todas las semanas que es siempre igual?**
+
+Anotalo. Eso que anotaste es un comando esperando existir. La automatización con Claude Code no arranca por la tecnología: arranca por tu rutina.
+
+## Anatomía de un comando propio
+
+Los comandos son archivos de texto en `.claude/commands/`. El nombre del archivo es el comando; el contenido, las instrucciones:
+
+```markdown
+# .claude/commands/prensa.md
+
+Buscá en la web las noticias de las últimas 24 horas sobre cine
+argentino en estos medios: [tu lista]. Armá el resumen siguiendo
+@plantillas/resumen-prensa.md y guardalo en prensa/AAAA-MM-DD.md
+con la fecha de hoy. Marcá con ⚠️ las noticias que mencionen al INCAA.
+```
+
+Desde ese momento, escribir `/prensa` hace todo eso. Cada vez, igual, sin olvidarse un paso.
+
+> **Detalle importante:** después de crear un comando nuevo, reiniciá Claude Code para que lo levante.
+
+## La receta para automatizar cualquier rutina
+
+1. **Hacela a mano con Claude una vez**, prestando atención a los pasos
+2. **Cuando salió bien, pedile**: "convertí exactamente esto en un comando /nombre"
+3. **Usala una semana** y ajustá el archivo con lo que falte
+4. **Listo**: tenés un proceso documentado que se ejecuta solo
+
+Fijate el bonus: el comando ES la documentación de tu proceso. Si mañana lo hace otra persona, el archivo explica cómo se hace.
+
+## Ideas por profesión
+
+| Si sos... | Tu comando podría ser... |
+|-----------|--------------------------|
+| Periodista | `/monitoreo` de medios, `/desgrabar` entrevistas al formato de tu redacción |
+| Investigadora | `/fichar` un paper nuevo con tu plantilla de fichas |
+| Abogado | `/resumir-fallo` con la estructura que usa tu estudio |
+| Docente | `/consigna` que genera trabajos prácticos con tu rúbrica |
+| Gestión pública | `/informe-mensual` desde los CSV que te mandan |
+| Emprendedora | `/propuesta` comercial desde notas de una reunión |
+
+## Conectar con tus otras apps: MCP
+
+MCP (Model Context Protocol) es el enchufe que conecta Claude Code con servicios externos: Notion, Google Drive, Gmail, calendarios, bases de datos.
+
+Con MCP configurado, tus comandos cruzan fronteras: */prensa* puede terminar con "y mandalo por mail al equipo" o "guardalo en el Notion de la redacción". La configuración es un paso técnico que Claude te guía si le pedís: *"quiero conectar Claude Code con mi Notion, guiame"*.
+
+## Automatizar el navegador
+
+Claude también puede manejar tu navegador (con la extensión de Chrome): ver lo que vos ves, llenar formularios, navegar sitios. Para monitoreos de fuentes que no tienen otra forma de acceso, es la pieza que faltaba.
+
+## Hasta dónde llegar (por ahora)
+
+Regla sana para no programadores: **automatizá lo que ya sabés hacer a mano.** Si nunca hiciste la tarea con Claude paso a paso, no la conviertas en comando todavía. Primero entendé el proceso, después automatizalo. Los sistemas que no entendés son los que te dejan a pata un lunes a las 9.
+
+---
+
+## Siguiente lección
+
+**[4.3 · Mostrar lo construido →](/clase-4/mostrar-lo-construido)**: el cierre del taller es tuyo.
