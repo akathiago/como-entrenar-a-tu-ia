@@ -1,0 +1,107 @@
+---
+title: 'Instalar Claude Code en Windows (y Mac) en 15 minutos'
+description: 'Guía de instalación de Claude Code paso a paso para gente que no programa. Windows con PowerShell primero, Mac después, con solución de problemas.'
+keywords: 'instalar claude code, claude code windows, claude code powershell, claude code instalacion español, como instalar claude code'
+---
+
+## Instalación
+
+- **Tiempo:** 15 minutos
+- **Dificultad:** copiar y pegar un comando. Posta.
+
+## Antes de arrancar, necesitás
+
+- **Suscripción a Claude Pro o Max** (la versión gratis NO alcanza)
+  - Si no la tenés, creala en [claude.ai](https://claude.ai). Pro cuesta USD 20 por mes.
+- Windows 10 o más nuevo, Mac (macOS 10.15+) o Linux
+- Conexión a internet
+- **Ningún programa de programación.** Nada de instalar cosas raras antes.
+
+## Paso 1: abrí la terminal
+
+La terminal es la ventana donde vas a escribir comandos. Se abre así:
+
+**Windows** (el camino que usa la mayoría del taller):
+1. Apretá la tecla de Windows
+2. Escribí "PowerShell"
+3. Enter
+
+**Mac:**
+1. Apretá `Cmd + Espacio` para abrir Spotlight
+2. Escribí "Terminal"
+3. Enter
+
+Te va a aparecer una ventana con un cursor titilando. No muerde. Ahí se escribe.
+
+## Paso 2: instalá Claude Code
+
+Copiá el comando que corresponde a tu sistema, pegalo en la terminal y apretá Enter.
+
+**Windows (PowerShell):**
+```powershell
+irm https://claude.ai/install.ps1 | iex
+```
+
+**Mac / Linux:**
+```bash
+curl -fsSL https://claude.ai/install.sh | bash
+```
+
+Cuando termine, **cerrá la terminal y abrila de nuevo.** Este paso parece tonto pero es clave: la terminal necesita reiniciarse para enterarse de que Claude existe.
+
+## Paso 3: verificá que se instaló
+
+En la terminal nueva, escribí:
+
+```bash
+claude --version
+```
+
+Si te muestra un número de versión, listo. Si te dice algo tipo "no se reconoce el comando", andá a la sección de problemas acá abajo.
+
+## Paso 4: iniciá sesión
+
+1. Escribí `claude` y apretá Enter
+2. Elegí **"Claude account with subscription"** (NO "Anthropic Console", esa es otra cosa)
+3. Se te va a abrir el navegador para iniciar sesión: hacelo con tu cuenta de claude.ai
+4. Elegí el estilo de texto que más te guste
+5. Si ves la pantalla de bienvenida de Claude Code, ya está
+
+## Si algo salió mal
+
+### "El término 'claude' no se reconoce..." (Windows)
+- Cerrá PowerShell del todo (todas las ventanas) y abrilo de nuevo
+- Si sigue igual, reiniciá la computadora. Sí, el clásico. Funciona.
+
+### "command not found: claude" (Mac)
+- Cerrá la terminal y abrila de nuevo
+- Si sigue igual, escribí `source ~/.zshrc` y probá otra vez
+
+### "Necesitás una suscripción"
+- Entrá a [claude.ai](https://claude.ai) y verificá que tu suscripción Pro esté activa
+- Cerrá sesión y volvé a entrar
+
+### "Permission denied" o error de permisos (Windows)
+- Cerrá PowerShell, buscalo de nuevo en el menú de inicio, click derecho y "Ejecutar como administrador", y repetí el comando de instalación
+
+### El diagnóstico automático
+Una vez adentro de Claude Code, escribí `/doctor`: te muestra qué anda y qué no, como un chequeo médico.
+
+### Nada de esto funcionó
+Traé el error a clase o mandalo por el grupo del taller. Sacale captura de pantalla a la terminal (o copiá el texto del error): con eso alcanza para diagnosticar.
+
+## Chuleta de comandos
+
+| Comando | Qué hace |
+|---------|----------|
+| `claude` | Abre Claude Code |
+| `claude --version` | Muestra qué versión tenés |
+| `claude doctor` | Diagnóstico desde la terminal |
+| `/doctor` | Diagnóstico adentro de Claude Code |
+| `/help` | Lista de comandos disponibles |
+
+---
+
+## Siguiente paso
+
+**[Primer arranque →](/antes-de-empezar/primer-arranque)**: descargá los materiales del taller y arrancá tu primera lección.

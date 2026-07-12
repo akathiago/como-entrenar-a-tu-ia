@@ -6,7 +6,28 @@ Material complementario del taller "Cómo entrenar a tu IA" (Claude Code para no
 
 ---
 
-## Fase actual: FASE 2 completada → esperando OK de Thiago para FASE 3
+## Fase actual: FASE 3 en curso (adaptación de contenido)
+
+### Decisiones ya tomadas por Thiago (2026-07-12)
+- Navegación aprobada tal como está abajo.
+- Escenario narrativo: **revista digital ficticia "Cimarrón"** + datos del INCAA (reemplaza a Basecamp Coffee, misma mecánica de misterio: la persona alumna hereda la sección de cine/datos hecha un caos).
+- Alcance: se adaptan **sitio web + guiones interactivos** de course-materials/ (comandos pasan de `/start-X-Y` a `/clase-X-Y`).
+
+### Progreso fase 3 (una unidad = un commit)
+- [x] Unidad 1: navegación nueva + landing (index.mdx) + sección "Antes de empezar" (3 páginas) + search.mdx en español. Páginas viejas en inglés ELIMINADAS del working tree (recuperables con `git show cbb7599:pages/...`).
+- [ ] Unidad 2: Clase 1 · COMPRENDER (pages/clase-1/)
+- [ ] Unidad 3: Clase 2 · EXPERIMENTAR (pages/clase-2/)
+- [ ] Unidad 4: Clase 3 · PUBLICAR (pages/clase-3/)
+- [ ] Unidad 5: Clase 4 · POTENCIAR+MOSTRAR (pages/clase-4/)
+- [ ] Unidad 6: Las 5 verticales (pages/verticales/)
+- [ ] Unidad 7: Preguntas frecuentes (pages/faq.mdx)
+- [ ] Unidad 8: Recursos / recap por clase (pages/recursos/)
+- [ ] Unidad 9: course-materials/ en español (escenario Cimarrón, guiones CLAUDE.md, comandos /clase-X-Y, archivos de práctica con datos INCAA)
+- [ ] Unidad 10: limpieza infra (EmailPopup, DownloadGate, api/join*, GA del autor, convert-content.sh, fix-frontmatter*.py, releases/*.zip viejos, course-structure.json nuevo)
+
+### Pendientes marcados en el contenido
+- `pages/antes-de-empezar/primer-arranque.mdx` y landing: LINK-PENDIENTE del zip de materiales (definir dónde se publica el repo/release de Thiago). La carpeta de materiales se llamará `taller-ia`.
+- A medida que se crean secciones nuevas hay que ir agregándolas a `pages/_meta.ts` (hoy solo tiene index, antes-de-empezar y search).
 
 ## Estado por fase
 
@@ -16,9 +37,7 @@ Material complementario del taller "Cómo entrenar a tu IA" (Claude Code para no
 - [ ] **Fase 4 · Rediseño visual**: Tungsten (fallback Oswald) / Merriweather / Roboto, blanco y negro, dark+light mode. Tocar `styles/globals.css` y `theme.config.tsx`.
 - [ ] **Fase 5 · Verificación**: npm install, npm run dev, build, revisar restos de inglés/TaskFlow/Basecamp.
 
-## Pendiente de decisión (Thiago)
-
-1. **Propuesta de navegación para fase 3** (presentada en la conversación, copiada acá para no perderla):
+## Navegación aprobada
 
 ```
 Inicio (landing del taller)
@@ -31,10 +50,6 @@ Las 5 verticales          → una guía por vertical (webs, datos, automatizaci�
 Preguntas frecuentes      → privacidad, formatos, licencias, hasta dónde sin programar
 Recursos                  → recap por clase, cheat sheet, glosario
 ```
-(la distribución exacta de lecciones dentro de cada clase se define al adaptarla)
-
-2. **Escenario narrativo** que reemplaza a Basecamp Coffee: propuse redacción/medio ficticio con datos del INCAA como caso transversal; a confirmar cuando arranque fase 3.
-3. **course-materials/ (lecciones interactivas)**: ¿se adaptan también los guiones interactivos al español o solo el sitio web? El pedido original habla del sitio; los guiones son la mitad de la experiencia. A decidir.
 
 ## Qué falló / notas
 
@@ -44,8 +59,9 @@ Recursos                  → recap por clase, cheat sheet, glosario
 
 ## Próximo paso concreto
 
-**Esperar el OK de Thiago a la estructura de navegación** (y sus respuestas a las decisiones pendientes). Con el OK: empezar fase 3 por "Antes de empezar" + landing, commitear, y seguir con Clase 1.
+**Unidad 2: escribir pages/clase-1/ (COMPRENDER)** con 4 páginas: como-pensar-la-herramienta, archivos-y-arroba, comandos-y-atajos, claude-md. Fuentes originales: `git show cbb7599:pages/fundamentals/course-intro.mdx`, `visual-workspace.mdx`, `working-with-files.mdx` (parcial), `commands-navigation.mdx`, `project-memory.mdx`. Agregar "clase-1" a pages/_meta.ts. Commit al terminar.
 
 ## Log de commits
 
-- (pendiente) `chore: análisis inicial + estado + contexto del taller`
+- `cbb7599` docs: análisis del repo original + estado + contexto del taller
+- (siguiente) feat: navegación nueva + landing + antes de empezar
