@@ -1,0 +1,57 @@
+---
+title: 'Análisis de datos y dashboards con Claude Code'
+description: 'Cómo analizar CSVs, encuestas y datos públicos con Claude Code y convertirlos en dashboards interactivos, sin Excel ni Python.'
+keywords: 'analisis de datos con ia, dashboard sin programar, claude code datos, periodismo de datos ia, csv analisis'
+---
+
+## Vertical 2 · Análisis de datos y dashboards
+
+**Para quién:** periodistas de datos, investigadoras, economistas, gestión pública, docentes con notas de 200 estudiantes, cualquiera con una planilla que da miedo abrir.
+
+## El cambio de paradigma
+
+El flujo clásico: abrir Excel, pelear con tablas dinámicas, hacer un gráfico feo, pegarlo en Word. El flujo nuevo: tirarle el archivo a Claude y conversar con los datos.
+
+Claude Code lee CSV, Excel, JSON y bases de datos, y puede escribir y ejecutar el código de análisis por vos. Vos hacés las preguntas de siempre; el código es asunto de la máquina.
+
+## Caso 1: la exploración inicial (¿qué hay acá?)
+
+```
+Leé @datos/estrenos-incaa.csv y contame: qué columnas tiene, qué
+período cubre, qué agujeros o datos raros ves, y qué 5 preguntas
+interesantes se le podrían hacer a este dataset.
+```
+
+Este prompt vale oro con datos públicos argentinos: INCAA, presupuesto abierto, datos.gob.ar, resultados electorales. Bajás el CSV y en dos minutos sabés si hay nota.
+
+## Caso 2: el cruce que cuenta la historia
+
+```
+Cruzá los estrenos por año con la cantidad de espectadores. ¿El cine
+argentino estrena más y convoca menos? Mostrame los números y decime
+si la afirmación aguanta. Ojo: si el dato no alcanza para afirmarlo,
+decímelo.
+```
+
+El "decime si la afirmación aguanta" es la parte importante: Claude puede desmentir tu hipótesis, que es exactamente lo que necesitás antes de publicar.
+
+## Caso 3: el dashboard para compartir
+
+```
+Armá un dashboard.html con estos datos: evolución anual de estrenos,
+top 10 películas por espectadores, y participación del cine nacional
+vs extranjero. Interactivo, que se entienda sin explicación, listo
+para mandar por link.
+```
+
+Un archivo HTML que funciona en cualquier navegador. Publicado con el loop de la [Clase 3](/clase-3), es un informe vivo con URL.
+
+## Mini-proyecto para hoy
+
+Bajá un CSV de [datos.gob.ar](https://datos.gob.ar) sobre un tema que te importe. Exploración inicial → dos o tres preguntas → un dashboard con lo mejor. De cero a link compartible en una tarde.
+
+## Límites honestos
+
+- **Verificá los números que vas a publicar.** Claude se equivoca poco con datos que tiene enfrente, pero una cifra citada en una nota se chequea a mano contra la fuente. Siempre.
+- **Archivos gigantes** (millones de filas) requieren otro enfoque; pedile a Claude que trabaje con muestras o resúmenes.
+- **Estadística seria** (significancia, regresiones, causalidad): Claude la hace, pero si no entendés el método, no publiques la conclusión. Pedile que te explique el método hasta entenderlo.

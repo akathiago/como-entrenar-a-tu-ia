@@ -1,0 +1,57 @@
+---
+title: 'Herramientas interactivas y juegos educativos con Claude Code'
+description: 'Cómo crear quizzes, trivias, simuladores y material didáctico jugable con Claude Code, sin motores de juego ni programación.'
+keywords: 'juegos educativos con ia, crear quiz sin programar, trivia interactiva ia, material didactico interactivo'
+---
+
+## Vertical 5 · Herramientas interactivas y juegos educativos
+
+**Para quién:** docentes de cualquier nivel, capacitadoras, divulgadores, comunicadoras, y cualquiera que haya pensado "esto se entendería mejor si se pudiera jugar".
+
+## La idea central
+
+Lo interactivo era caro: pedirlo a un programador, pagar una plataforma, conformarse con el formato enlatado de Kahoot. Ahora un juego a medida es una conversación de una hora. Y como viste en la [Clase 3](/clase-3), la lógica de un juego se define en castellano: "si elige A, pasa esto". Vos ponés las reglas, Claude pone el código.
+
+## Caso 1: la trivia con personalidad
+
+```
+Creá trivia.html: 8 preguntas de opción múltiple sobre [tu tema].
+Feedback inmediato en cada respuesta (por qué está bien o mal),
+puntaje final con mensajes distintos según el resultado, y un botón
+de "jugar de nuevo". Que se vea bien en el celular: la van a usar
+desde el aula.
+```
+
+El feedback por respuesta es lo que la vuelve pedagógica: no evalúa, enseña.
+
+## Caso 2: el test de personalidad (el formato que nunca falla)
+
+```
+Quiero un test "¿Qué [categoría] sos?" con 6 preguntas y 4 resultados
+posibles. Entrevistame para definir las preguntas, los resultados y
+qué respuesta suma para cuál. Después construilo: una pregunta por
+pantalla, barra de progreso, resultado compartible.
+```
+
+Sirve para divulgación ("¿qué escuela económica sos?"), para medios (el clásico de Butaca en el taller), para onboarding de cursos.
+
+## Caso 3: el simulador de decisiones
+
+```
+Armá un simulador tipo "elegí tu propia aventura" sobre [una situación
+de tu materia]: el estudiante toma decisiones en cada paso y ve las
+consecuencias. 3 niveles de decisión, finales distintos, y al final
+un resumen de qué eligió y qué hubiera pasado con otros caminos.
+```
+
+Ideal para ética profesional, gestión de crisis, procedimientos: todo lo que se aprende mejor equivocándose sin consecuencias.
+
+## Mini-proyecto para hoy
+
+Agarrá el tema que más te cuesta enseñar. Armá la trivia del Caso 1 con 5 preguntas. Probala con una persona real y mirá dónde se traba. Iterá. Cuando funcione, publicala con el loop de la [Clase 3](/clase-3) y mandá el link a tus estudiantes.
+
+## Límites honestos
+
+- **Esto no es Unity.** Juegos de acción, gráficos 3D, multijugador en tiempo real: otro deporte. Lo que brilla acá: quizzes, tests, simuladores de texto, memotests, generadores.
+- **Guardar resultados de los estudiantes** (quién jugó, qué puntaje sacó) requiere una base de datos: se puede, pero es el escalón siguiente. La versión simple: que el estudiante te mande captura del resultado.
+- **La calidad pedagógica sigue siendo tuya.** Claude arma el juego que le pidas; que las preguntas midan lo que importa es trabajo docente. Como siempre.

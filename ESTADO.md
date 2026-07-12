@@ -19,7 +19,7 @@ Material complementario del taller "Cómo entrenar a tu IA" (Claude Code para no
 - [x] Unidad 3: Clase 2 · EXPERIMENTAR (pages/clase-2/: index + los-5-patrones + agentes-en-paralelo + ejercicios-por-vertical). Nuevo archivo de práctica referido: `caos-heredado/estrenos-incaa.csv` y `plantillas/resumen-prensa.md` (crear en unidad 9). Comandos /clase-2-1 a /clase-2-3.
 - [x] Unidad 4: Clase 3 · PUBLICAR (pages/clase-3/: index + planificar + construir-e-iterar + github + deploy). Proyecto narrativo: quiz "¿Qué clásico del cine argentino sos?" (con opción de proyecto propio). Archivo de requisitos: `REQUISITOS.md`. Comandos /clase-3-1 a /clase-3-4.
 - [x] Unidad 5: Clase 4 · POTENCIAR+MOSTRAR (pages/clase-4/: index + sub-agentes-y-skills + automatizar-tu-rutina + mostrar-lo-construido). Incluye formato de demo final (3 min), MCP y browser automation presentados a nivel conceptual. Comandos /clase-4-1 a /clase-4-3.
-- [ ] Unidad 6: Las 5 verticales (pages/verticales/)
+- [x] Unidad 6: Las 5 verticales (pages/verticales/: index + 5 guías escritas de cero, ~100 líneas c/u, formato: para quién + 3 casos con prompts + mini-proyecto + límites honestos).
 - [ ] Unidad 7: Preguntas frecuentes (pages/faq.mdx)
 - [ ] Unidad 8: Recursos / recap por clase (pages/recursos/)
 - [ ] Unidad 9: course-materials/ en español (escenario Cimarrón, guiones CLAUDE.md, comandos /clase-X-Y, archivos de práctica con datos INCAA)
@@ -59,7 +59,7 @@ Recursos                  → recap por clase, cheat sheet, glosario
 
 ## Próximo paso concreto
 
-**Unidad 6: escribir pages/verticales/** (index + 5 guías, una por vertical). Fuentes útiles del original: `git show cbb7599:pages/guides/claude-code-for-data-analysts.mdx`, `claude-code-for-researchers.mdx`, `claude-code-for-writers.mdx` (son largas, 20KB c/u: tomar estructura e ideas, NO traducir entero; apuntar a guías de ~150 líneas). Cada guía: para quién es, 3 casos concretos con prompts, un mini-proyecto sugerido, límites honestos. Agregar "verticales" a pages/_meta.ts. Commit al terminar.
+**Unidad 7: escribir pages/faq.mdx** con las 4 dudas requeridas por CONTEXTO-TALLER.md (privacidad de datos, archivos y formatos soportados, licencias y copyright de lo generado, hasta dónde sin programar) + las que suelen aparecer (costos y límites de uso, español vs inglés, qué pasa si borro algo). Fuente útil para límites/precios: `git show cbb7599:pages/guides/claude-code-limits-and-pricing.mdx`. Agregar "faq" a pages/_meta.ts. Commit al terminar.
 
 ## Convenciones fijadas (respetar en todo el contenido)
 

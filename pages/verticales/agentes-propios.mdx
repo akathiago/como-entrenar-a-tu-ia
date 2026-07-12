@@ -1,0 +1,71 @@
+---
+title: 'Agentes y asistentes sobre corpus propio con Claude Code'
+description: 'Cómo convertir tu archivo de documentos (papers, fallos, apuntes, entrevistas) en un asistente que responde con fuentes.'
+keywords: 'ia sobre documentos propios, asistente personalizado ia, claude code corpus, buscar en mis documentos ia'
+---
+
+## Vertical 4 · Agentes y asistentes sobre corpus propio
+
+**Para quién:** investigadoras con años de papers, abogados con jurisprudencia acumulada, periodistas con archivos de entrevistas, docentes con bibliografía de cátedra. Gente cuyo capital es un corpus.
+
+## La idea central
+
+Tenés cientos de documentos que leíste una vez y ahora son un cementerio de PDFs. Claude Code convierte esa carpeta en algo que responde preguntas **con fuentes**: no un chatbot que improvisa, sino un asistente que solo sabe lo que hay en TU archivo y te dice de dónde sacó cada cosa.
+
+La diferencia con subir archivos a un chatbot: acá el corpus vive en tu máquina, no hay límite de "10 archivos por conversación", y la configuración (CLAUDE.md, sub-agentes) queda armada para siempre.
+
+## Caso 1: preguntarle a tu archivo
+
+```
+Mirá todos los archivos de @corpus/ y respondeme: ¿qué autores
+trabajan el concepto de [X]? ¿En qué coinciden y en qué chocan?
+Citá el archivo y la sección de donde sale cada afirmación.
+Si algo no está en el corpus, decí "esto no está en tus documentos".
+```
+
+Las dos cláusulas finales son el corazón del asistente serio: **fuentes siempre, y silencio antes que invento.**
+
+## Caso 2: el CLAUDE.md que lo vuelve permanente
+
+Para no repetir las reglas cada vez, fijalas en la constitución del proyecto:
+
+```markdown
+# CLAUDE.md de la carpeta del corpus
+
+## Qué es esto
+Mi archivo de investigación sobre [tema]. PDFs en corpus/,
+mis notas en notas/.
+
+## Reglas
+- SIEMPRE citar archivo y página/sección de cada afirmación
+- NUNCA responder con conocimiento general sin aclararlo:
+  si no está en el corpus, decirlo explícitamente
+- Las síntesis nuevas se guardan en sintesis/, nunca sobre
+  los originales
+```
+
+Abrís Claude Code en esa carpeta y el asistente ya sabe las reglas. Todas las sesiones, para siempre.
+
+## Caso 3: el ingreso de material nuevo
+
+Combalo con la vertical de automatización:
+
+```
+Creá un comando /ingresar que tome el último PDF de descargas/,
+lo mueva a corpus/, genere su ficha (autores, año, tesis central,
+conceptos clave, citas textuales útiles) en fichas/, y me diga
+con qué otros documentos del corpus dialoga.
+```
+
+Cada documento nuevo entra fichado y conectado. Tu archivo deja de ser un cementerio.
+
+## Mini-proyecto para hoy
+
+Elegí 10 documentos de un tema que domines (para poder verificar). Armá la carpeta, el CLAUDE.md con las reglas, y hacele tres preguntas cuya respuesta conocés. Evaluá: ¿citó bien? ¿inventó algo? Ajustá las reglas hasta que confíes.
+
+## Límites honestos
+
+- **PDFs escaneados** (fotos de papel): Claude no siempre puede leerlos. Los que son texto real funcionan perfecto.
+- **Corpus enormes** (miles de documentos): no entra todo junto en una conversación. Estrategia: fichas + búsqueda por etapas. Claude te ayuda a armarla.
+- **Verificá las citas textuales.** Cuando una cita va a publicación o a un escrito judicial, se coteja contra el original. La herramienta reduce el trabajo de encontrar; no elimina el de verificar.
+- **Datos sensibles**: si el corpus tiene información privada de terceros, leé primero la parte de privacidad de las [Preguntas frecuentes](/faq).

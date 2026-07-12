@@ -1,0 +1,66 @@
+---
+title: 'Automatización de tareas repetitivas con Claude Code'
+description: 'Cómo convertir tareas repetitivas (monitoreo de prensa, informes, fichajes) en comandos de Claude Code que se ejecutan solos.'
+keywords: 'automatizar tareas con ia, claude code automatizacion, monitoreo de prensa automatico, informes automaticos ia'
+---
+
+## Vertical 3 · Automatización de tareas repetitivas
+
+**Para quién:** cualquiera con una tarea que hace igual todas las semanas y que podría describir dormido. Ese es el requisito: si la podés describir, la podés automatizar.
+
+## La idea central
+
+En Claude Code, automatizar es escribir las instrucciones de una tarea en un archivo (`.claude/commands/nombre.md`). Desde ese momento, `/nombre` la ejecuta completa. Sin plataformas de automatización, sin suscripciones: archivos de texto.
+
+## Caso 1: el monitoreo de prensa
+
+```
+# .claude/commands/monitoreo.md
+
+Buscá noticias de las últimas 24hs sobre [tu tema] en [tus medios].
+Armá un resumen con: titular, medio, link, y una línea de por qué
+importa. Ordenalo de más a menos relevante. Guardalo en
+monitoreo/AAAA-MM-DD.md. Si no hay nada relevante, decilo sin inventar.
+```
+
+El "si no hay nada, decilo sin inventar" es la cláusula anti-verso. Ponela en todos tus comandos de búsqueda.
+
+## Caso 2: el informe recurrente
+
+```
+# .claude/commands/informe-semanal.md
+
+Leé todos los archivos nuevos de @avances/ de esta semana. Armá el
+informe siguiendo @plantillas/informe.md: qué se hizo, qué se trabó,
+qué sigue. Tono ejecutivo, máximo una carilla. Guardalo en informes/.
+```
+
+La plantilla hace la mitad del trabajo: tu formato exacto, tus secciones, tu tono, cada semana idéntico.
+
+## Caso 3: la desgrabación con formato
+
+```
+# .claude/commands/entrevista.md
+
+Tomá la desgrabación que te voy a pasar y convertila al formato de
+@plantillas/entrevista.md: limpiá muletillas sin cambiar el sentido,
+marcá las mejores frases textuales con >, y armá una lista de temas
+con minutos aproximados.
+```
+
+## La receta (de la Clase 4, porque es LA receta)
+
+1. Hacé la tarea a mano con Claude una vez
+2. Cuando salió bien: "convertí exactamente esto en un comando /nombre"
+3. Usala una semana, ajustá el archivo
+4. Tenés un proceso documentado que se ejecuta solo
+
+## Mini-proyecto para hoy
+
+Elegí TU tarea más odiada de la semana. Hacela con Claude una vez, conversando. Si el resultado sirve, pedile el comando. La semana que viene, esa tarea son 30 segundos.
+
+## Límites honestos
+
+- **Claude Code no corre solo mientras dormís** (sin meterte en terreno técnico). La automatización acá es "yo escribo /monitoreo y sale solo", no "se ejecuta a las 6 AM sin mí". Para lo segundo existen herramientas, pero es nivel avanzado.
+- **Tareas dentro de apps cerradas** (cargar cosas en un sistema interno de tu empresa): depende. Con la extensión de Chrome se puede mucho, pero probalo antes de prometerlo.
+- **No automatices lo que no entendés.** Primero el proceso a mano, después el comando.
