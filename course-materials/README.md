@@ -1,64 +1,54 @@
-# Claude Code for Everyone - Course Materials
+# Cómo entrenar a tu IA · Materiales del taller
 
-Welcome to **Claude Code for Everyone** (CC4E), a hands-on course teaching Claude Code to non-technical users.
+Materiales de práctica del taller **"Cómo entrenar a tu IA"** (Claude Code para no programadores, Anfibia Escuela).
 
-## Getting Started
+## Para empezar
 
-1. Open this folder in Cursor (or VS Code)
-2. Open the terminal (Ctrl+` or View → Terminal)
-3. Type `claude` and press Enter
-4. Type `/start-1-1` to begin!
+1. Abrí una terminal en esta carpeta (Windows: escribí `powershell` en la barra de dirección del Explorador)
+2. Escribí `claude` y apretá Enter
+3. Escribí `/clase-1-1` y arrancó el taller
 
-## Course Structure
+## Las 4 clases
 
-### Module 1: Claude Code Fundamentals
-- **1.1** Introduction - Welcome and course overview
-- **1.2** File Exploration - Navigate files and set up your workspace
-- **1.3** Working with Files - Extract, synthesize, templates, images, web
-- **1.4** Commands & Navigation - Shortcuts and power user features
-- **1.5** Agents - Parallel processing with multiple Claude instances
-- **1.6** Custom Sub-agents - Create your advisory team
-- **1.7** CLAUDE.md - Persistent project memory
-- **1.8** Power Features - Celebration and Module 2 preview
+| Clase | Arco | Comandos |
+|-------|------|----------|
+| Clase 1 | COMPRENDER | `/clase-1-1` a `/clase-1-4` |
+| Clase 2 | EXPERIMENTAR | `/clase-2-1` a `/clase-2-3` |
+| Clase 3 | PUBLICAR | `/clase-3-1` a `/clase-3-4` |
+| Clase 4 | POTENCIAR + MOSTRAR | `/clase-4-1` a `/clase-4-3` |
 
-### Module 2: Vibe Coding (Coming Soon)
-Build the Coffee Personality Quiz from scratch!
+## El escenario
 
-## The Scenario
+Sos la nueva persona a cargo de **Butaca**, la sección de cine de la revista digital **Cimarrón**. El editor anterior se fue de un día para el otro y dejó un caos. La dirección te dio 3 meses para dar vuelta la sección, o la cierran.
 
-You're the new manager at **Basecamp Coffee**, a regional coffee chain with a struggling loyalty program. Your job: turn it around in 3 months.
+A lo largo del taller vas a:
+- Analizar el caos que heredaste
+- Descubrir qué está fallando de verdad
+- Encontrar la solución (pista: está enterrada en las notas del editor anterior)
+- Construir y PUBLICAR algo que salve la sección
 
-Through the course, you'll:
-- Analyze the chaos you inherited
-- Discover what's wrong with the program
-- Find the solution (spoiler: it involves coffee personalities)
-- Build a prototype to save the day
-
-## Folder Structure
+## Estructura de carpetas
 
 ```
-company-context/     → Background on Basecamp Coffee
-inherited-chaos/     → The mess you inherited (files to analyze)
-templates/           → Document templates
-attachments/         → Images and other assets
-organized/           → Files you'll create as you organize
-analysis/            → Analysis outputs you'll generate
-reviews/             → Feedback from sub-agents
+contexto/            → Qué es Cimarrón, la voz de la revista, la newsletter
+caos-heredado/       → El desastre que te dejaron (archivos para analizar)
+plantillas/          → Formatos de la revista (informes, prensa, entrevistas)
+recursos-graficos/   → Imágenes para los ejercicios
+ordenado/            → Acá van los archivos que vas creando
+analisis/            → Salidas de análisis
+revisiones/          → Feedback de tus sub-agentes
 ```
 
-## Reference Files
+**Ojo con `caos-heredado/estrenos-incaa.csv`:** son datos de práctica, verosímiles pero inventados. No citar en trabajos reales (ver `caos-heredado/LEEME-DATOS.md`).
 
-Each lesson has a reference page at ccforeveryone.com with:
-- Deeper explanations
-- Additional resources
-- Troubleshooting guides
+## Referencia
 
-## Need Help?
+Cada lección tiene su página de referencia en el sitio del taller, con explicaciones más profundas, tablas de comandos y solución de problemas.
 
-- Ask Claude! That's the whole point.
-- Check the reference files at ccforeveryone.com
-- Reach out to Carl: [X](https://x.com/carlvellotti) / [LinkedIn](https://linkedin.com/in/carlvellotti)
+## ¿Trabado?
 
-## Created By
+Preguntale a Claude. En serio: esa es toda la gracia.
 
-Carl Vellotti - [The Full Stack PM](https://fullstackpm.com)
+## Créditos
+
+Taller de Anfibia Escuela, dictado por Thiago. Estructura pedagógica adaptada del curso [Claude Code for Everyone](https://ccforeveryone.com) de Carl Vellotti (CC BY-NC-ND 4.0).
