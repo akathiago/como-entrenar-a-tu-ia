@@ -1,0 +1,123 @@
+---
+title: '1.4 CLAUDE.md: la memoria del proyecto | Clase 1'
+description: 'Qué es CLAUDE.md, qué poner y qué no, template en español y buenas prácticas para que Claude Code recuerde tu proyecto en cada sesión.'
+keywords: 'claude.md español, claude code memoria, claude.md template, claude.md ejemplos, claude code contexto persistente'
+---
+
+## 1.4 · CLAUDE.md: la memoria
+
+- **Tiempo:** 15 minutos
+
+> **Lección interactiva:** escribí `/clase-1-4` en Claude Code
+
+## El problema de re-explicar todo
+
+Cada conversación nueva con un chatbot arranca de cero: quién sos, qué estás haciendo, cómo te gusta que escriba, qué palabras no usar. Lo explicaste ayer, lo explicás hoy, lo vas a explicar mañana.
+
+## La solución: un archivo que Claude lee siempre
+
+**CLAUDE.md** es un archivo especial que Claude Code lee automáticamente al arrancar cada sesión:
+
+- Vive en la raíz de la carpeta de tu proyecto
+- Lo escribís una vez y Claude lo sabe para siempre
+- Se crea a mano o con el comando `/init` (Claude analiza tu carpeta y lo arma solo)
+
+## La metáfora: constitución y leyes
+
+| | CLAUDE.md (la constitución) | Tus prompts (las leyes del día) |
+|---|---|---|
+| **Autoridad** | Manda sobre todo | Decisiones puntuales |
+| **Duración** | Permanente | Dura lo que dura el pedido |
+| **Si chocan** | Gana CLAUDE.md | Se ajusta a la constitución |
+
+## Qué poner
+
+- Qué es el proyecto y para quién es
+- Tu rol y tus objetivos
+- Tono y estilo de escritura ("cercano pero riguroso", "sin jerga académica")
+- Reglas de terminología ("SIEMPRE escribir 'lectores', no 'usuarios'")
+- Reglas inamovibles ("NUNCA inventar cifras: si falta el dato, marcarlo como pendiente")
+- Gente clave y contexto que no cambia
+
+**Ejemplo del taller** (el CLAUDE.md de la sección Butaca):
+
+```markdown
+## El proyecto
+Butaca, la sección de cine de la revista Cimarrón. Estoy intentando
+relanzarla: análisis de datos del INCAA + newsletter + una herramienta
+interactiva para lectores.
+
+## Estilo
+- Español rioplatense, cercano, sin solemnidad
+- Los datos siempre con fuente citada
+- Títulos que den ganas de hacer clic sin ser clickbait
+
+## Terminología
+- SIEMPRE "lectores", nunca "usuarios" ni "audiencia"
+- La revista es "Cimarrón", la sección es "Butaca"
+
+## Reglas
+- NUNCA inventar cifras del INCAA: si el dato no está, decirlo
+- Los borradores van a la carpeta borradores/, nunca a publicados/
+```
+
+## Qué NO poner
+
+- Información temporal (las notas de la reunión de hoy)
+- Cosas que cambian todas las semanas
+- Datos sensibles: contraseñas, API keys, datos personales de terceros
+
+**La prueba:** ¿querés que Claude siga sabiendo esto dentro de 6 meses? Si no, no va.
+
+## El símbolo # para reglas al vuelo
+
+En medio de una sesión, escribí un mensaje que empiece con `#`:
+
+```
+# en esta sesión usá siempre viñetas, nada de párrafos largos
+```
+
+Claude te ofrece guardarlo en la memoria. Sirve para probar reglas antes de fijarlas en CLAUDE.md.
+
+## Niveles de memoria
+
+Podés tener varios CLAUDE.md y se suman entre sí:
+
+| Nivel | Dónde vive | Para qué |
+|-------|-----------|----------|
+| **Global** | `~/.claude/CLAUDE.md` | Vos: tu tono, tus preferencias, en todos tus proyectos |
+| **Proyecto** | `carpeta-del-proyecto/CLAUDE.md` | Este proyecto: contexto, reglas, terminología |
+| **Subcarpeta** | `carpeta/subcarpeta/CLAUDE.md` | Reglas específicas de una parte |
+
+Si hay conflicto, gana el más específico. El global es oro puro: escribí una vez quién sos y cómo te gusta trabajar, y toda sesión futura arranca sabiéndolo.
+
+## Buenas prácticas
+
+- **Específico gana a vago.** "A los lectores les gusta lo simple" no sirve. "Ningún mail de la newsletter puede superar las 300 palabras" sí.
+- **Imperativo gana a sugerencia.** "Estaría bueno que..." no. "SIEMPRE..." sí.
+- **Explicá el porqué de las reglas.** "Usar 'lectores' y no 'usuarios' porque somos una revista, no una app" ayuda a que Claude aplique el criterio en casos nuevos.
+- **Corto y escaneable.** Entre 50 y 200 líneas. Si crece más, algo sobra.
+- **Revisalo cada tanto.** Tu proyecto cambia; la constitución también.
+
+## Problemas típicos
+
+| Problema | Solución |
+|----------|----------|
+| Claude ignora una regla | Hacela explícita con SIEMPRE/NUNCA y en imperativo |
+| No carga el archivo | El nombre tiene que ser exactamente `CLAUDE.md` |
+| Se hizo eterno | Recortá: dejá reglas, sacá historia |
+
+## Dónde más sirve esto
+
+- **Tu "sistema operativo personal"**: objetivos, valores, cómo trabajás (en el CLAUDE.md global)
+- **Proyectos con clientes**: la voz y el historial de cada cliente en su carpeta
+- **Escribir un libro**: personajes, trama, guía de estilo
+- **Docencia**: el programa de tu materia, el tono para materiales de cátedra
+
+---
+
+## Terminaste la Clase 1
+
+Ya comprendés la herramienta: sabés qué es, cómo señalarle archivos, cómo manejarla y cómo darle memoria. 
+
+**Siguiente: [Clase 2 · EXPERIMENTAR →](/clase-2)**: los cinco patrones de trabajo con archivos y agentes trabajando en paralelo para vos. *(disponible a medida que avanza el taller)*

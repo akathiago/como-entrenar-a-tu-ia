@@ -1,0 +1,88 @@
+---
+title: '1.2 Ver y referenciar archivos | Clase 1'
+description: 'Cómo armar un workspace visual para ver lo que hace Claude Code y cómo referenciar archivos y carpetas con el símbolo @.'
+keywords: 'claude code arroba, claude code archivos, claude code workspace visual, claude code obsidian, claude code vs code'
+---
+
+## 1.2 · Ver y referenciar archivos
+
+- **Tiempo:** 20 minutos
+
+> **Lección interactiva:** escribí `/clase-1-2` en Claude Code
+
+## El problema de trabajar a ciegas
+
+Claude Code vive en la terminal. Le pedís que cree un documento y te dice "listo, lo creé". ¿Dónde? ¿Qué dice? ¿Lo hizo bien? Trabajar así es como dictarle a alguien que está en otra habitación.
+
+**La solución:** abrir un editor visual al lado de la terminal, en pantalla partida. Terminal a un lado, tus archivos al otro. Así:
+
+- Ves los archivos aparecer mientras Claude los crea
+- Leés los documentos mientras Claude sigue trabajando
+- Verificás que todo esté donde tiene que estar
+
+## Elegí tu visor
+
+Cualquiera de estos sirve. No lo pienses demasiado: es un visor de archivos, no un compromiso de por vida.
+
+| Herramienta | Ideal si... | Detalle |
+|---|---|---|
+| **VS Code** (gratis) | Querés la opción más estándar | Ve todo, incluso carpetas ocultas. Recomendada para el taller. |
+| **Obsidian** (gratis) | Ya lo usás para notas | Muy lindo para leer markdown, pero no muestra carpetas ocultas como `.claude/` |
+| **Explorador de Windows + Bloc de notas** | No querés instalar nada hoy | Alcanza para arrancar, te va a quedar chico rápido |
+
+**Setup en dos minutos (VS Code):** abrilo, File → Open Folder, elegí la carpeta `taller-ia`. Acomodá las ventanas: terminal a la izquierda, VS Code a la derecha.
+
+**Probalo:** pedile a Claude *"Creá un archivo llamado prueba.md con un saludo adentro"* y miralo aparecer en el editor. Sin refrescar nada. Esa es la sensación de trabajar con visibilidad.
+
+## El símbolo @: así se señala
+
+`@` es la forma de decirle a Claude "esto, mirá esto":
+
+| Escribís | Claude lee |
+|----------|-----------|
+| `@notas.md` | Ese archivo puntual |
+| `@caos-heredado/` | La carpeta entera, todos los archivos |
+| `@caos-heredado/notas-del-editor.md` | Un archivo adentro de una subcarpeta |
+
+Cuando empezás a escribir `@`, Claude Code te sugiere los archivos disponibles. Elegís con las flechas y Tab.
+
+**Ejemplos con los archivos del taller:**
+
+```
+Leé @caos-heredado/notas-del-editor-anterior.md y decime qué estaba planeando
+```
+
+```
+Mirá @caos-heredado/comentarios-lectores/ y decime qué se repite
+```
+
+## Por qué esto cambia todo
+
+En un chatbot, darle contexto es un suplicio: subir archivos de a uno, copiar y pegar pedazos, rezar que no se corte. Acá el contexto ya está en tu computadora. Señalás con @ y listo.
+
+Esta es la base de todo lo que viene: en la Clase 2 vas a ver los cinco patrones de trabajo con archivos (extraer, sintetizar, plantillas, imágenes y web) que se construyen sobre este símbolo.
+
+## La carpeta oculta .claude/
+
+Dentro de la carpeta del taller hay una carpeta llamada `.claude/` con los comandos de las lecciones. Es oculta: el Explorador de Windows no la muestra por defecto.
+
+- **Windows:** Explorador → pestaña Vista → tildá "Elementos ocultos"
+- **Mac:** en Finder, `Cmd + Shift + .`
+- **VS Code:** la muestra siempre, otro punto a su favor
+
+Por ahora no necesitás tocarla. En la Clase 4 vamos a meternos ahí para crear comandos propios.
+
+## Problemas típicos
+
+| Problema | Solución |
+|----------|----------|
+| "No veo los archivos en el editor" | Abriste la carpeta equivocada. Preguntale a Claude: *"¿cuál es la ruta de esta carpeta?"* y abrí exactamente esa. |
+| "El archivo no se actualiza" | Hacé clic afuera y adentro de la ventana del editor. Si sigue, cerrá y abrí el archivo. |
+| "Veo símbolos raros en vez de texto lindo" | Estás viendo markdown crudo. En VS Code: clic derecho → Open Preview. En Obsidian: `Ctrl + E`. |
+| "@ no me sugiere nada" | Verificá que abriste Claude Code EN la carpeta del taller, no en otro lado. |
+
+---
+
+## Siguiente lección
+
+**[1.3 · Comandos y atajos →](/clase-1/comandos-y-atajos)**: los comandos que vas a usar todos los días y el botón de pánico.

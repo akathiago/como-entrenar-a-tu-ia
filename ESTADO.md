@@ -15,7 +15,7 @@ Material complementario del taller "Cómo entrenar a tu IA" (Claude Code para no
 
 ### Progreso fase 3 (una unidad = un commit)
 - [x] Unidad 1: navegación nueva + landing (index.mdx) + sección "Antes de empezar" (3 páginas) + search.mdx en español. Páginas viejas en inglés ELIMINADAS del working tree (recuperables con `git show cbb7599:pages/...`).
-- [ ] Unidad 2: Clase 1 · COMPRENDER (pages/clase-1/)
+- [x] Unidad 2: Clase 1 · COMPRENDER (pages/clase-1/: index + 4 lecciones). Escenario Cimarrón/Butaca presentado en 1.1 y en el index de la clase. Carpeta de materiales referida como `caos-heredado/` (nombre a respetar en unidad 9).
 - [ ] Unidad 3: Clase 2 · EXPERIMENTAR (pages/clase-2/)
 - [ ] Unidad 4: Clase 3 · PUBLICAR (pages/clase-3/)
 - [ ] Unidad 5: Clase 4 · POTENCIAR+MOSTRAR (pages/clase-4/)
@@ -59,9 +59,18 @@ Recursos                  → recap por clase, cheat sheet, glosario
 
 ## Próximo paso concreto
 
-**Unidad 2: escribir pages/clase-1/ (COMPRENDER)** con 4 páginas: como-pensar-la-herramienta, archivos-y-arroba, comandos-y-atajos, claude-md. Fuentes originales: `git show cbb7599:pages/fundamentals/course-intro.mdx`, `visual-workspace.mdx`, `working-with-files.mdx` (parcial), `commands-navigation.mdx`, `project-memory.mdx`. Agregar "clase-1" a pages/_meta.ts. Commit al terminar.
+**Unidad 3: escribir pages/clase-2/ (EXPERIMENTAR)** con index + 3 páginas: los-5-patrones (fuente: `git show cbb7599:pages/fundamentals/working-with-files.mdx`), agentes-en-paralelo (fuente: `agents.mdx`), ejercicios-por-vertical (contenido nuevo, un ejercicio concreto por cada una de las 5 verticales de CONTEXTO-TALLER.md). Agregar "clase-2" a pages/_meta.ts. Commit al terminar.
+
+## Convenciones fijadas (respetar en todo el contenido)
+
+- Escenario: revista **Cimarrón**, sección de cine **Butaca**, editor anterior que se fue, datos INCAA, newsletter en caída. Carpeta de práctica: `caos-heredado/` (con `comentarios-lectores/`, `notas-del-editor-anterior.md`, etc.), carpeta de salida `ordenado/`, `plantillas/`.
+- Carpeta descargable del taller: `taller-ia`
+- Comandos interactivos: `/clase-X-Y` (Clase 1: /clase-1-1 a /clase-1-4)
+- Tono: rioplatense Anfibia, sin em dashes, términos técnicos en inglés sin traducir
+- Cada lección: frontmatter SEO en español + tiempo + callout "Lección interactiva" + tablas de referencia + problemas típicos + link a siguiente lección
 
 ## Log de commits
 
 - `cbb7599` docs: análisis del repo original + estado + contexto del taller
-- (siguiente) feat: navegación nueva + landing + antes de empezar
+- `7f8791e` feat: navegación nueva + landing + antes de empezar
+- (siguiente) feat: Clase 1 COMPRENDER
