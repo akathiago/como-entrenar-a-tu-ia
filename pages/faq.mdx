@@ -1,0 +1,72 @@
+---
+title: 'Preguntas frecuentes | Cómo entrenar a tu IA'
+description: 'Las dudas que aparecen en todos los talleres: privacidad de datos, formatos de archivo, licencias de lo generado, costos y hasta dónde se puede llegar sin programar.'
+keywords: 'claude code privacidad, claude ia datos personales, copyright ia, claude code limites, claude code precios'
+---
+
+# Preguntas frecuentes
+
+Las dudas que aparecen en todas las ediciones del taller, respondidas sin vueltas. Última revisión: julio 2026. Las políticas y precios cambian: ante la duda, la fuente es [anthropic.com](https://www.anthropic.com) y la [documentación oficial](https://docs.anthropic.com/en/docs/claude-code).
+
+## Privacidad: ¿a dónde van mis datos?
+
+**¿Claude lee todos mis archivos?** No. Claude Code solo lee los archivos de la carpeta donde lo abriste, y dentro de ella, los que la conversación necesita. No anda escaneando tu computadora.
+
+**¿Lo que le paso viaja a algún lado?** Sí, y esto hay que decirlo claro: para procesar tu pedido, el contenido que referenciás viaja a los servidores de Anthropic. No es distinto de usar Gmail o Google Docs, pero conviene saberlo.
+
+**¿Usan mis conversaciones para entrenar modelos?** Depende de la configuración de tu cuenta: revisala en claude.ai → Settings → Privacy. Podés elegir que no. Hacelo consciente, no por default.
+
+**Reglas prácticas para trabajo sensible:**
+- Fuentes periodísticas que proteger, expedientes con datos de terceros, historias clínicas: **anonimizá antes** (reemplazá nombres por iniciales o códigos) o directamente no lo proceses con IA
+- Contraseñas y claves de API: nunca en un archivo que Claude vaya a leer, nunca en la conversación
+- Si trabajás en una organización con políticas de datos, preguntá antes. "Lo hice con IA" no es excusa ante un compliance officer.
+
+## Archivos: ¿qué formatos entiende?
+
+| Tipo | Formatos | Notas |
+|------|----------|-------|
+| Texto | .txt, .md, .docx | Perfecto |
+| Datos | .csv, .xlsx, .json | Perfecto, es su cancha |
+| Documentos | Word, PDF | PDFs de texto, perfecto; PDFs escaneados (fotos), a veces no |
+| Imágenes | .png, .jpg y similares | Las ve y las analiza (pegalas con Ctrl+V) |
+| Audio y video | .mp3, .mp4... | No directamente: primero se desgraban (Claude te guía con herramientas para eso) |
+
+La prueba definitiva es gratis: tirale el archivo y preguntale qué ve.
+
+## Licencias: ¿de quién es lo que genero?
+
+**¿Puedo usar comercialmente lo que hago con Claude?** Sí. Según los términos de Anthropic, lo que Claude genera para vos es tuyo en lo que a Anthropic respecta. Tu sitio, tu dashboard, tu quiz: usalos, vendelos, publicalos.
+
+**¿Tiene copyright lo generado por IA?** Zona gris legal, y en serio gris: en varias jurisdicciones (EE.UU. a la cabeza) una obra generada solo por IA no es registrable porque falta autoría humana. Cuanto más aporte tuyo (criterio, edición, dirección), más defendible tu autoría. Para el uso normal del taller esto no te afecta; si tu negocio depende de registrar la obra, consultá con alguien de propiedad intelectual.
+
+**¿Y si Claude genera algo parecido a una obra existente?** El riesgo existe, sobre todo pidiéndole "al estilo de X". Buena práctica editorial: no publiques textos o diseños generados sin pasarlos por tu criterio, y no pidas imitaciones de obras o marcas.
+
+**¿Tengo que decir que lo hice con IA?** Legalmente, en general no (todavía). Éticamente, depende de tu campo: en periodismo y academia la transparencia suma y las políticas de cada medio o revista mandan. Nuestra postura en el taller: decilo con naturalidad, nadie serio se escandaliza en 2026.
+
+## Sin programar: ¿hasta dónde se llega en serio?
+
+**Cómodamente, sin tocar código:** todo lo que hiciste en el taller. Análisis de documentos y datos, automatizaciones con comandos, sitios personales, dashboards, quizzes, agentes sobre tu corpus, publicado y con URL propia.
+
+**Con paciencia y buenos prompts:** apps con más pantallas, herramientas con lógica compleja, integraciones con otras apps vía MCP. El límite acá no es el código: es tu claridad para describir qué querés y tu paciencia para iterar.
+
+**Donde de verdad hace falta alguien técnico:** sistemas con usuarios y datos sensibles en producción, tiendas con pagos, cualquier cosa donde un error cueste plata o datos de terceros. Podés construir el prototipo vos; para ponerlo en producción seria, sumá a alguien que sepa.
+
+La trampa a evitar: no es "programar o no programar", es **entender o no entender lo que tenés entre manos**. Si Claude te armó algo y no sabés explicar qué hace, pedile que te lo explique hasta que puedas. Esa es la única regla.
+
+## Costos y límites
+
+**¿Cuánto sale?** Claude Pro: USD 20 por mes. Incluye Claude Code. Existe el plan Max (más caro, más límite) para uso intensivo.
+
+**¿Hay límite de uso?** Sí: los planes tienen cuotas que se renuevan por ventanas de tiempo. Si le das duro (agentes, ultrathink, proyectos grandes), podés tocar el techo y esperar a que se renueve. Chequeá tu consumo con `/usage`.
+
+**Para estirar la cuota:** conversaciones nuevas con `/clear` cuando cambiás de tema, `think` solo cuando hace falta, y no relances agentes por deporte.
+
+## Miscelánea de taller
+
+**¿Le hablo en español o en inglés?** Como quieras, entiende perfecto los dos (y el spanglish). Este taller es la prueba.
+
+**¿Puedo romper algo de mi computadora?** Claude Code pide permiso antes de tocar archivos (modo normal). El riesgo real es bajo; igual: para experimentar, carpeta de práctica, y para lo importante, respaldo en GitHub como viste en la [Clase 3](/clase-3).
+
+**¿Borré/rompí algo, hay vuelta atrás?** Escape dos veces (rewind) deshace cambios de la sesión. Si el proyecto estaba en GitHub, siempre se puede volver a cualquier versión. Por eso insistimos tanto con GitHub.
+
+**¿Esto me va a dejar sin trabajo?** Te va a dejar sin la parte del trabajo que odiabas. La parte donde hace falta criterio, contexto y saber qué preguntar quedó más valiosa, no menos. Justo la parte que entrenaste en este taller.
