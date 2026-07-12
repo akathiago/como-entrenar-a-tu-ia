@@ -24,7 +24,7 @@ Material complementario del taller "Cómo entrenar a tu IA" (Claude Code para no
 - [x] Unidad 8: Recursos (pages/recursos/: index + 4 recaps por clase + cheat-sheet). Cada recap: lo esencial + prompts + tarea semanal + links.
 - [x] Unidad 9a: archivos de práctica Cimarrón en course-materials/ (contexto/, caos-heredado/ completo con CSV de práctica + LEEME-DATOS, plantillas/, recursos-graficos/placa-newsletter.svg, README nuevo). Commit b3499ec. NOTA: la placa es SVG, no JPG; si se quiere práctica de pegar imagen real, convertir a PNG/JPG después.
 - [x] Unidad 9b: guiones interactivos (course-materials/lecciones/clase-X-Y.md, 14 guiones), comandos .claude/commands/clase-X-Y.md, SCRIPT_INSTRUCTIONS en español, sub-agentes de ejemplo (editora-brutal, lector-distraido, directora), course-structure.json de 4 clases. NOTA: una sesión se cortó a mitad de esta unidad; se completó en la sesión siguiente (faltaban clase-4-3.md, los 3 agents y course-structure.json). El material viejo en inglés (lesson-modules/, start-X-Y, agents originales) quedó eliminado en este commit.
-- [ ] Unidad 10: limpieza infra (EmailPopup, DownloadGate, api/join*, GA del autor, convert-content.sh, fix-frontmatter*.py, releases/*.zip viejos, course-structure.json nuevo)
+- [x] Unidad 10: limpieza infra. Eliminados: EmailPopup, DownloadGate (y sus usos en pages/_app.jsx), api/join.js, api/join2.js, vercel.json (solo tenía los rewrites de /join), GA del autor y su meta google-site-verification en theme.config.tsx, convert-content.sh, fix-frontmatter*.py, releases/*.zip. Se conservó components/charts.jsx (lo usan las páginas).
 
 ### Pendientes marcados en el contenido
 - `pages/antes-de-empezar/primer-arranque.mdx` y landing: LINK-PENDIENTE del zip de materiales (definir dónde se publica el repo/release de Thiago). La carpeta de materiales se llamará `taller-ia`.
@@ -34,7 +34,7 @@ Material complementario del taller "Cómo entrenar a tu IA" (Claude Code para no
 
 - [x] **Fase 1 · Análisis**: repo clonado en `C:\Users\Thiago\como-entrenar-a-tu-ia`, explorado a fondo. Hallazgos en `ANALISIS.md`. Dato clave: la empresa ficticia es **Basecamp Coffee** (TaskFlow es legacy). El curso tiene doble superficie: sitio web de referencia (pages/) + lecciones interactivas (course-materials/ con guiones CLAUDE.md y comandos /start-X-Y).
 - [x] **Fase 2 · Contexto del taller**: documentado en `CONTEXTO-TALLER.md` (audiencia, arco de 4 clases, 5 verticales, tono, FAQ requerida).
-- [ ] **Fase 3 · Adaptación de contenido**: EN CURSO, casi lista. Unidades 1 a 9b completas y commiteadas. Falta solo la unidad 10 (limpieza infra).
+- [x] **Fase 3 · Adaptación de contenido**: COMPLETA. Unidades 1 a 10 commiteadas.
 - [ ] **Fase 4 · Rediseño visual**: Tungsten (fallback Oswald) / Merriweather / Roboto, blanco y negro, dark+light mode. Tocar `styles/globals.css` y `theme.config.tsx`.
 - [ ] **Fase 5 · Verificación**: npm install, npm run dev, build, revisar restos de inglés/TaskFlow/Basecamp.
 
@@ -60,13 +60,11 @@ Recursos                  → recap por clase, cheat sheet, glosario
 
 ## Próximo paso concreto
 
-**Unidad 10: limpieza infra**. Eliminar del repo lo que era del autor original y no aplica al taller:
-1. Componentes: EmailPopup, DownloadGate (y sus usos/imports en páginas y theme.config.tsx)
-2. Endpoints: api/join.js y api/join2.js (newsletter del autor)
-3. Google Analytics del autor (buscar el ID en theme.config.tsx / _app / _document)
-4. Scripts sueltos: convert-content.sh, fix-frontmatter*.py
-5. releases/*.zip viejos (material del curso original en inglés)
-Después de la unidad 10 arranca la Fase 4 (rediseño visual) → consultar con Thiago antes de arrancarla.
+**Fase 4 · Rediseño visual** (ESPERAR OK DE THIAGO antes de arrancar):
+- Tipografías: Tungsten (fallback Oswald) para títulos, Merriweather, Roboto
+- Blanco y negro, dark + light mode
+- Tocar `styles/globals.css` y `theme.config.tsx` (que además sigue con branding "CC for Everyone" en títulos, OG y footer: se adapta en esta fase, manteniendo el crédito a Carl Vellotti)
+Después Fase 5: npm install, npm run dev, build, y barrida de restos de inglés/TaskFlow/Basecamp.
 
 ## Convenciones fijadas (respetar en todo el contenido)
 
@@ -88,4 +86,5 @@ Después de la unidad 10 arranca la Fase 4 (rediseño visual) → consultar con 
 - `4015057` feat: preguntas frecuentes
 - `10f798a` feat: sección Recursos
 - `b3499ec` feat: materiales de práctica Cimarrón (9a)
-- (siguiente) feat: guiones interactivos y comandos /clase-X-Y (9b)
+- `cac460e` feat: guiones interactivos /clase-X-Y en español, escenario Cimarrón (9b)
+- (siguiente) chore: limpieza de infra del autor original (unidad 10)
