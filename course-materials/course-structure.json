@@ -1,109 +1,129 @@
 {
   "course": {
-    "name": "Claude Code for Everyone",
-    "code": "cc4e",
+    "name": "Cómo entrenar a tu IA",
+    "code": "taller-ia",
     "version": "1.0.0",
-    "author": "Carl Vellotti",
-    "website": "https://ccforeveryone.com"
+    "author": "Thiago · Anfibia Escuela (adaptación de Claude Code for Everyone, de Carl Vellotti)",
+    "website": "LINK-PENDIENTE"
   },
   "modules": [
     {
       "id": "1",
-      "name": "Claude Code Fundamentals",
-      "description": "Master the core features of Claude Code through the Basecamp Coffee scenario",
+      "name": "Clase 1 · COMPRENDER",
+      "description": "Cómo pensar la herramienta y dirigirla con archivos reales, en el escenario de Cimarrón/Butaca",
       "lessons": [
         {
           "id": "1.1",
-          "name": "Introduction",
-          "path": "lesson-modules/1.1-introduction/CLAUDE.md",
-          "description": "Welcome, course overview, and scenario introduction"
+          "name": "Cómo pensar la herramienta",
+          "path": "lecciones/clase-1-1.md",
+          "description": "Bienvenida, qué es Claude Code y presentación del escenario: la sección Butaca heredada"
         },
         {
           "id": "1.2",
-          "name": "File Exploration & Visualization",
-          "path": "lesson-modules/1.2-file-exploration/CLAUDE.md",
-          "description": "Navigate file structures and set up visual workspace (Cursor)"
+          "name": "Ver y referenciar archivos",
+          "path": "lecciones/clase-1-2.md",
+          "description": "Explorar el caos heredado, referenciar archivos con @ y armar el espacio de trabajo"
         },
         {
           "id": "1.3",
-          "name": "Working with Files",
-          "path": "lesson-modules/1.3-working-with-files/CLAUDE.md",
-          "description": "Extract, synthesize, template, analyze images, web research"
+          "name": "Comandos y atajos",
+          "path": "lecciones/clase-1-3.md",
+          "description": "Slash commands, atajos de teclado y cómo pedir mejor"
         },
         {
           "id": "1.4",
-          "name": "Commands & Navigation",
-          "path": "lesson-modules/1.4-commands-navigation/CLAUDE.md",
-          "description": "Slash commands, shortcuts, think keywords, power mode"
-        },
-        {
-          "id": "1.5",
-          "name": "Agents",
-          "path": "lesson-modules/1.5-agents/CLAUDE.md",
-          "description": "Parallel processing with multiple Claude instances"
-        },
-        {
-          "id": "1.6",
-          "name": "Custom Sub-agents",
-          "path": "lesson-modules/1.6-custom-sub-agents/CLAUDE.md",
-          "description": "Create persistent advisors with different perspectives"
-        },
-        {
-          "id": "1.7",
-          "name": "CLAUDE.md (Project Memory)",
-          "path": "lesson-modules/1.7-claude-md/CLAUDE.md",
-          "description": "Persistent context that survives sessions"
-        },
-        {
-          "id": "1.8",
-          "name": "Power Features Overview",
-          "path": "lesson-modules/1.8-power-features/CLAUDE.md",
-          "description": "Celebration, recap, and preview of Module 2"
+          "name": "CLAUDE.md, la memoria del proyecto",
+          "path": "lecciones/clase-1-4.md",
+          "description": "Contexto persistente que sobrevive entre sesiones"
         }
       ]
     },
     {
       "id": "2",
-      "name": "Vibe Coding",
-      "description": "Build a real web app from scratch and deploy it",
+      "name": "Clase 2 · EXPERIMENTAR",
+      "description": "Los patrones de trabajo con archivos y el procesamiento en paralelo",
       "lessons": [
         {
           "id": "2.1",
-          "name": "Setup",
-          "path": "lesson-modules/2.1-setup/CLAUDE.md",
-          "description": "The vibecoding mindset and project folder setup"
+          "name": "Los 5 patrones con archivos",
+          "path": "lecciones/clase-2-1.md",
+          "description": "Extraer, sintetizar, plantillas, imágenes y web sobre los datos del INCAA"
         },
         {
           "id": "2.2",
-          "name": "Plan",
-          "path": "lesson-modules/2.2-plan/CLAUDE.md",
-          "description": "Interview process to define clear requirements"
+          "name": "Agentes en paralelo",
+          "path": "lecciones/clase-2-2.md",
+          "description": "Procesar en lote con varios agentes a la vez"
         },
         {
           "id": "2.3",
-          "name": "Build & Iterate",
-          "path": "lesson-modules/2.3-build-iterate/CLAUDE.md",
-          "description": "Scaffold, build, and refine with screenshots"
+          "name": "Ejercicios por vertical",
+          "path": "lecciones/clase-2-3.md",
+          "description": "Práctica aplicada al mundo de cada persona"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Clase 3 · PUBLICAR",
+      "description": "Planificar, construir y publicar un proyecto real con URL propia",
+      "lessons": [
+        {
+          "id": "3.1",
+          "name": "Planificar tu proyecto",
+          "path": "lecciones/clase-3-1.md",
+          "description": "Entrevista de requisitos y REQUISITOS.md del quiz de Butaca o proyecto propio"
         },
         {
-          "id": "2.4",
-          "name": "GitHub",
-          "path": "lesson-modules/2.4-github/CLAUDE.md",
-          "description": "Version control and backup"
+          "id": "3.2",
+          "name": "Construir e iterar",
+          "path": "lecciones/clase-3-2.md",
+          "description": "Armar la primera versión y refinarla con capturas"
         },
         {
-          "id": "2.5",
-          "name": "Go Live",
-          "path": "lesson-modules/2.5-go-live/CLAUDE.md",
-          "description": "Deploy to Vercel with a real URL"
+          "id": "3.3",
+          "name": "GitHub sin dolor",
+          "path": "lecciones/clase-3-3.md",
+          "description": "Control de versiones y respaldo del proyecto"
+        },
+        {
+          "id": "3.4",
+          "name": "Deploy, tu URL real",
+          "path": "lecciones/clase-3-4.md",
+          "description": "Publicar en Vercel con una URL para compartir"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Clase 4 · POTENCIAR",
+      "description": "Sub-agentes, automatización de la rutina y la muestra final",
+      "lessons": [
+        {
+          "id": "4.1",
+          "name": "Sub-agentes y skills",
+          "path": "lecciones/clase-4-1.md",
+          "description": "El consejo asesor permanente: editora brutal, lector distraído, directora"
+        },
+        {
+          "id": "4.2",
+          "name": "Automatizar tu rutina",
+          "path": "lecciones/clase-4-2.md",
+          "description": "Convertir tareas repetitivas en comandos propios"
+        },
+        {
+          "id": "4.3",
+          "name": "Mostrar lo construido",
+          "path": "lecciones/clase-4-3.md",
+          "description": "Preparar la demo de 3 minutos y cierre del taller"
         }
       ]
     }
   ],
   "scenario": {
-    "company": "Basecamp Coffee",
-    "role": "New manager inheriting a struggling loyalty program",
-    "goal": "Turn around the program in 3 months",
-    "solution": "Coffee Personality Quiz"
+    "company": "Revista digital Cimarrón, sección de cine Butaca",
+    "role": "Nueva persona a cargo de la sección tras la salida del editor anterior",
+    "goal": "Levantar una sección correcta pero olvidable y una newsletter en caída",
+    "solution": "Quiz ¿Qué clásico del cine argentino sos?"
   }
 }

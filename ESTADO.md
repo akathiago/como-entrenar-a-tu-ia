@@ -22,7 +22,8 @@ Material complementario del taller "Cómo entrenar a tu IA" (Claude Code para no
 - [x] Unidad 6: Las 5 verticales (pages/verticales/: index + 5 guías escritas de cero, ~100 líneas c/u, formato: para quién + 3 casos con prompts + mini-proyecto + límites honestos).
 - [x] Unidad 7: Preguntas frecuentes (pages/faq.mdx: privacidad, formatos, licencias, sin-programar, costos, miscelánea). Fechada "julio 2026" para revisiones futuras.
 - [x] Unidad 8: Recursos (pages/recursos/: index + 4 recaps por clase + cheat-sheet). Cada recap: lo esencial + prompts + tarea semanal + links.
-- [ ] Unidad 9: course-materials/ en español (escenario Cimarrón, guiones CLAUDE.md, comandos /clase-X-Y, archivos de práctica con datos INCAA)
+- [x] Unidad 9a: archivos de práctica Cimarrón en course-materials/ (contexto/, caos-heredado/ completo con CSV de práctica + LEEME-DATOS, plantillas/, recursos-graficos/placa-newsletter.svg, README nuevo). Commit b3499ec. NOTA: la placa es SVG, no JPG; si se quiere práctica de pegar imagen real, convertir a PNG/JPG después.
+- [x] Unidad 9b: guiones interactivos (course-materials/lecciones/clase-X-Y.md, 14 guiones), comandos .claude/commands/clase-X-Y.md, SCRIPT_INSTRUCTIONS en español, sub-agentes de ejemplo (editora-brutal, lector-distraido, directora), course-structure.json de 4 clases. NOTA: una sesión se cortó a mitad de esta unidad; se completó en la sesión siguiente (faltaban clase-4-3.md, los 3 agents y course-structure.json). El material viejo en inglés (lesson-modules/, start-X-Y, agents originales) quedó eliminado en este commit.
 - [ ] Unidad 10: limpieza infra (EmailPopup, DownloadGate, api/join*, GA del autor, convert-content.sh, fix-frontmatter*.py, releases/*.zip viejos, course-structure.json nuevo)
 
 ### Pendientes marcados en el contenido
@@ -33,7 +34,7 @@ Material complementario del taller "Cómo entrenar a tu IA" (Claude Code para no
 
 - [x] **Fase 1 · Análisis**: repo clonado en `C:\Users\Thiago\como-entrenar-a-tu-ia`, explorado a fondo. Hallazgos en `ANALISIS.md`. Dato clave: la empresa ficticia es **Basecamp Coffee** (TaskFlow es legacy). El curso tiene doble superficie: sitio web de referencia (pages/) + lecciones interactivas (course-materials/ con guiones CLAUDE.md y comandos /start-X-Y).
 - [x] **Fase 2 · Contexto del taller**: documentado en `CONTEXTO-TALLER.md` (audiencia, arco de 4 clases, 5 verticales, tono, FAQ requerida).
-- [ ] **Fase 3 · Adaptación de contenido**: BLOQUEADA hasta que Thiago apruebe la propuesta de navegación (ver abajo). Ir clase por clase, commit por clase.
+- [ ] **Fase 3 · Adaptación de contenido**: EN CURSO, casi lista. Unidades 1 a 9b completas y commiteadas. Falta solo la unidad 10 (limpieza infra).
 - [ ] **Fase 4 · Rediseño visual**: Tungsten (fallback Oswald) / Merriweather / Roboto, blanco y negro, dark+light mode. Tocar `styles/globals.css` y `theme.config.tsx`.
 - [ ] **Fase 5 · Verificación**: npm install, npm run dev, build, revisar restos de inglés/TaskFlow/Basecamp.
 
@@ -59,13 +60,13 @@ Recursos                  → recap por clase, cheat sheet, glosario
 
 ## Próximo paso concreto
 
-**Unidad 9: adaptar course-materials/** al escenario Cimarrón en español:
-1. Renombrar comandos `.claude/commands/start-X-Y.md` → `clase-X-Y.md` (mapeo: 1.2→1-2? OJO: el mapeo original NO es 1 a 1: las lecciones originales 1.1-1.8 y 2.1-2.5 se redistribuyen en /clase-1-1 a /clase-1-4, /clase-2-1 a /clase-2-3, /clase-3-1 a /clase-3-4, /clase-4-1 a /clase-4-3, según las páginas ya publicadas en pages/)
-2. Reescribir guiones lesson-modules/*/CLAUDE.md en español con formato STOP/USER/ACTION/Discovery + Success Criteria (ver ANALISIS.md sección "Anatomía de una lección interactiva")
-3. Reemplazar archivos de práctica: company-context/ → contexto de Cimarrón/Butaca; inherited-chaos/ → caos-heredado/ (notas-del-editor-anterior.md, comentarios-lectores/ x4 meses, newsletters-viejas/, otros-medios/, estrenos-incaa.csv con datos verosímiles del INCAA); templates/ → plantillas/ (informe-direccion.md, resumen-prensa.md); attachments/loyalty-flyer.jpg → placa promo genérica (generar o describir); .claude/agents/ → editora-brutal, lector-distraido, directora
-4. Semillas narrativas a mantener: "correcta pero olvidable" (comentarios) y la idea del quiz "¿Qué clásico del cine argentino sos?" (en notas del editor)
-5. Actualizar course-structure.json a las 4 clases
-Es la unidad más grande: se puede partir en sub-commits (contexto+caos primero, guiones después).
+**Unidad 10: limpieza infra**. Eliminar del repo lo que era del autor original y no aplica al taller:
+1. Componentes: EmailPopup, DownloadGate (y sus usos/imports en páginas y theme.config.tsx)
+2. Endpoints: api/join.js y api/join2.js (newsletter del autor)
+3. Google Analytics del autor (buscar el ID en theme.config.tsx / _app / _document)
+4. Scripts sueltos: convert-content.sh, fix-frontmatter*.py
+5. releases/*.zip viejos (material del curso original en inglés)
+Después de la unidad 10 arranca la Fase 4 (rediseño visual) → consultar con Thiago antes de arrancarla.
 
 ## Convenciones fijadas (respetar en todo el contenido)
 
@@ -79,4 +80,12 @@ Es la unidad más grande: se puede partir en sub-commits (contexto+caos primero,
 
 - `cbb7599` docs: análisis del repo original + estado + contexto del taller
 - `7f8791e` feat: navegación nueva + landing + antes de empezar
-- (siguiente) feat: Clase 1 COMPRENDER
+- `f45062f` feat: Clase 1 COMPRENDER
+- `4eecec6` feat: Clase 2 EXPERIMENTAR
+- `d15acb7` feat: Clase 3 PUBLICAR
+- `1f970f4` feat: Clase 4 POTENCIAR+MOSTRAR
+- `108592f` feat: guías de las 5 verticales
+- `4015057` feat: preguntas frecuentes
+- `10f798a` feat: sección Recursos
+- `b3499ec` feat: materiales de práctica Cimarrón (9a)
+- (siguiente) feat: guiones interactivos y comandos /clase-X-Y (9b)
