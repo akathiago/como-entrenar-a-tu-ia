@@ -1,4 +1,4 @@
-# ESTADO.md · Cómo entrenar a tu IA
+# ESTADO.md · Cómo entrenar a tu IA (fase 4 completa)
 
 Material complementario del taller "Cómo entrenar a tu IA" (Claude Code para no programadores, Anfibia Escuela). Adaptación del repo claude-code-everyone-course de Carl Vellotti.
 
@@ -6,7 +6,7 @@ Material complementario del taller "Cómo entrenar a tu IA" (Claude Code para no
 
 ---
 
-## Fase actual: FASE 3 en curso (adaptación de contenido)
+## Fase actual: FASE 4 completa → sigue FASE 5 (verificación)
 
 ### Decisiones ya tomadas por Thiago (2026-07-12)
 - Navegación aprobada tal como está abajo.
@@ -35,8 +35,11 @@ Material complementario del taller "Cómo entrenar a tu IA" (Claude Code para no
 - [x] **Fase 1 · Análisis**: repo clonado en `C:\Users\Thiago\como-entrenar-a-tu-ia`, explorado a fondo. Hallazgos en `ANALISIS.md`. Dato clave: la empresa ficticia es **Basecamp Coffee** (TaskFlow es legacy). El curso tiene doble superficie: sitio web de referencia (pages/) + lecciones interactivas (course-materials/ con guiones CLAUDE.md y comandos /start-X-Y).
 - [x] **Fase 2 · Contexto del taller**: documentado en `CONTEXTO-TALLER.md` (audiencia, arco de 4 clases, 5 verticales, tono, FAQ requerida).
 - [x] **Fase 3 · Adaptación de contenido**: COMPLETA. Unidades 1 a 10 commiteadas.
-- [ ] **Fase 4 · Rediseño visual**: Tungsten (fallback Oswald) / Merriweather / Roboto, blanco y negro, dark+light mode. Tocar `styles/globals.css` y `theme.config.tsx`.
-- [ ] **Fase 5 · Verificación**: npm install, npm run dev, build, revisar restos de inglés/TaskFlow/Basecamp.
+- [x] **Fase 4 · Rediseño visual**: HECHA (sin verificar en browser, eso es fase 5). Detalles:
+  - `styles/globals.css` reescrito: títulos Tungsten (fallback Oswald, Google Fonts) en MAYÚSCULAS, prosa Merriweather, UI (sidebar/nav/toc) Roboto, código JetBrains Mono. Paleta blanco y negro vía `--nextra-primary-saturation: 0%` en ambos modos. Eliminados los acentos teal/rojo del autor; links subrayados color heredado; inline code y botón de copiar neutros en dark y light. Se eliminó la regla que ocultaba h1 en mobile (dependía de imágenes de título del sitio original).
+  - `theme.config.tsx`: logo y branding "Cómo entrenar a tu IA", footer Anfibia Escuela + crédito a Carl Vellotti (CC BY-NC-ND), feedback link de Carl eliminado, `project`/`docsRepositoryBase` eliminados, SEO/OG en español, `nextThemes.defaultTheme: 'system'` (antes forzaba dark), `primaryHue: 0` + `primarySaturation: 0`. OG image ahora solo se emite si la página define `ogImage` en frontmatter (la imagen del autor ya no se usa; crear una propia es pendiente opcional).
+  - `next-sitemap.config.js`: siteUrl → placeholder `https://como-entrenar-a-tu-ia.vercel.app` (LINK-PENDIENTE, sync con theme.config.tsx), prioridades ajustadas a /clase y /verticales.
+- [ ] **Fase 5 · Verificación**: npm install, npm run dev, build, revisar restos de inglés/TaskFlow/Basecamp. Verificar en especial que Nextra 3.2.3 no proteste por claves de theme.config (`useNextSeoProps`, `nextThemes`, `primaryHue`) y que el look B&N funcione en dark y light.
 
 ## Navegación aprobada
 
@@ -60,11 +63,11 @@ Recursos                  → recap por clase, cheat sheet, glosario
 
 ## Próximo paso concreto
 
-**Fase 4 · Rediseño visual** (ESPERAR OK DE THIAGO antes de arrancar):
-- Tipografías: Tungsten (fallback Oswald) para títulos, Merriweather, Roboto
-- Blanco y negro, dark + light mode
-- Tocar `styles/globals.css` y `theme.config.tsx` (que además sigue con branding "CC for Everyone" en títulos, OG y footer: se adapta en esta fase, manteniendo el crédito a Carl Vellotti)
-Después Fase 5: npm install, npm run dev, build, y barrida de restos de inglés/TaskFlow/Basecamp.
+**Fase 5 · Verificación**:
+- `npm install` y `npm run dev`: revisar consola por warnings de theme.config (Nextra 3.2.3) y mirar el sitio en dark y light.
+- `npm run build` (incluye next-sitemap + pagefind en postbuild).
+- Barrida final de restos de inglés / TaskFlow / Basecamp / "CC for Everyone" en pages/ y public/ (favicon y /images/ siguen siendo los del autor original: decidir si se reemplazan).
+- Pendientes de contenido: LINK-PENDIENTE del zip de materiales, y revisar que `pages/_meta.ts` tenga todas las secciones.
 
 ## Convenciones fijadas (respetar en todo el contenido)
 
@@ -87,4 +90,5 @@ Después Fase 5: npm install, npm run dev, build, y barrida de restos de inglés
 - `10f798a` feat: sección Recursos
 - `b3499ec` feat: materiales de práctica Cimarrón (9a)
 - `cac460e` feat: guiones interactivos /clase-X-Y en español, escenario Cimarrón (9b)
-- (siguiente) chore: limpieza de infra del autor original (unidad 10)
+- `5e39412` chore: limpieza de infra del autor original (unidad 10)
+- (siguiente) feat: rediseño visual B&N + rebranding (fase 4)

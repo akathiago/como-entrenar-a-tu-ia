@@ -2,24 +2,48 @@ import React from 'react'
 import { useConfig } from 'nextra-theme-docs'
 import { useRouter } from 'next/router'
 
+const SITE_NAME = 'Cómo entrenar a tu IA'
+// LINK-PENDIENTE: reemplazar cuando se defina dónde se publica el sitio
+const SITE_URL = 'https://como-entrenar-a-tu-ia.vercel.app'
+
 export default {
-  logo: <span style={{ fontWeight: 600 }}>Claude Code for Everyone</span>,
-  project: {
-    link: 'https://github.com/carlvellotti/claude-code-everyone-course'
-  },
-  docsRepositoryBase: 'https://github.com/carlvellotti/claude-code-everyone-course/blob/main/website',
-  feedback: {
-    content: 'Give Carl feedback →',
-    useLink: () => 'mailto:carl@fullstackpm.com?subject=CC4E%20Feedback'
-  },
+  logo: (
+    <span
+      style={{
+        fontFamily: "'Tungsten', 'Oswald', 'Arial Narrow', sans-serif",
+        fontWeight: 600,
+        fontSize: '1.35rem',
+        textTransform: 'uppercase',
+        letterSpacing: '0.02em'
+      }}
+    >
+      Cómo entrenar a tu IA
+    </span>
+  ),
   editLink: {
     component: null
+  },
+  feedback: {
+    content: null
   },
   footer: {
     content: (
       <span>
-        © {new Date().getFullYear()} Carl Vellotti. Licensed under{' '}
-        <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="noopener noreferrer">
+        © {new Date().getFullYear()} Anfibia Escuela · Taller "Cómo entrenar a tu IA".
+        Adaptado de{' '}
+        <a
+          href="https://github.com/carlvellotti/claude-code-everyone-course"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Claude Code for Everyone
+        </a>{' '}
+        de Carl Vellotti, bajo licencia{' '}
+        <a
+          href="https://creativecommons.org/licenses/by-nc-nd/4.0/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           CC BY-NC-ND 4.0
         </a>
         .
@@ -27,20 +51,23 @@ export default {
     )
   },
   useNextSeoProps() {
-    return { titleTemplate: '%s – CC for Everyone' }
+    return { titleTemplate: `%s – ${SITE_NAME}` }
   },
-  theme: 'dark',
+  nextThemes: {
+    defaultTheme: 'system'
+  },
   head: function Head() {
     const { frontMatter, title } = useConfig()
     const { asPath } = useRouter()
-    const siteUrl = 'https://ccforeveryone.com'
     const isHome = asPath === '/'
     const pageTitle = isHome
-      ? 'Claude Code Tutorial (Free Course) | No Coding Required – CC for Everyone'
-      : (title ? `${title} – CC for Everyone` : 'CC for Everyone')
-    const description = frontMatter?.description || 'Learn Claude Code IN Claude Code! Free Claude Code tutorial — no coding required. Master AI agents, file ops, and vibe coding. Hands-on, no videos.'
-    const ogImage = frontMatter?.ogImage || `${siteUrl}/images/better-graphic.jpg`
-    const url = `${siteUrl}${asPath}`
+      ? `${SITE_NAME} | Taller de Claude Code sin programar – Anfibia Escuela`
+      : (title ? `${title} – ${SITE_NAME}` : SITE_NAME)
+    const description =
+      frontMatter?.description ||
+      'Taller de Claude Code para no programadores. Aprendé a trabajar con IA desde la terminal: archivos, agentes, automatización y proyectos publicados. Anfibia Escuela.'
+    const ogImage = frontMatter?.ogImage
+    const url = `${SITE_URL}${asPath}`
 
     return (
       <>
@@ -56,18 +83,22 @@ export default {
         {/* Open Graph */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content={url} />
-        <meta property="og:site_name" content="Claude Code for Everyone" />
+        <meta property="og:site_name" content={SITE_NAME} />
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={description} />
-        <meta property="og:image" content={ogImage} />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
+        {ogImage && (
+          <>
+            <meta property="og:image" content={`${SITE_URL}${ogImage}`} />
+            <meta property="og:image:width" content="1200" />
+            <meta property="og:image:height" content="630" />
+          </>
+        )}
 
         {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:card" content={ogImage ? 'summary_large_image' : 'summary'} />
         <meta name="twitter:title" content={pageTitle} />
         <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content={ogImage} />
+        {ogImage && <meta name="twitter:image" content={`${SITE_URL}${ogImage}`} />}
 
         {/* Additional SEO */}
         {frontMatter?.keywords && (
@@ -86,7 +117,8 @@ export default {
       </>
     )
   },
-  primaryHue: 169,
+  primaryHue: 0,
+  primarySaturation: 0,
   sidebar: {
     defaultMenuCollapseLevel: 1,
     toggleButton: true

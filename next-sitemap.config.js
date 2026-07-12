@@ -1,6 +1,7 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: 'https://ccforeveryone.com',
+  // LINK-PENDIENTE: reemplazar cuando se defina dónde se publica el sitio (mantener en sync con theme.config.tsx)
+  siteUrl: 'https://como-entrenar-a-tu-ia.vercel.app',
   outDir: 'out', // write directly into the static export (postbuild runs after next build copies public/)
   generateRobotsTxt: true,
   generateIndexSitemap: false, // Don't need index for <50k URLs
@@ -23,7 +24,7 @@ module.exports = {
         lastmod: new Date().toISOString(),
       }
     }
-    if (path.startsWith('/guides')) {
+    if (path.startsWith('/clase') || path.startsWith('/verticales')) {
       return {
         loc: path,
         changefreq: 'weekly',
