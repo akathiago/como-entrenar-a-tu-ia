@@ -16,7 +16,7 @@ Material complementario del taller "Cómo entrenar a tu IA" (Claude Code para no
 ### Progreso fase 3 (una unidad = un commit)
 - [x] Unidad 1: navegación nueva + landing (index.mdx) + sección "Antes de empezar" (3 páginas) + search.mdx en español. Páginas viejas en inglés ELIMINADAS del working tree (recuperables con `git show cbb7599:pages/...`).
 - [x] Unidad 2: Clase 1 · COMPRENDER (pages/clase-1/: index + 4 lecciones). Escenario Cimarrón/Butaca presentado en 1.1 y en el index de la clase. Carpeta de materiales referida como `caos-heredado/` (nombre a respetar en unidad 9).
-- [ ] Unidad 3: Clase 2 · EXPERIMENTAR (pages/clase-2/)
+- [x] Unidad 3: Clase 2 · EXPERIMENTAR (pages/clase-2/: index + los-5-patrones + agentes-en-paralelo + ejercicios-por-vertical). Nuevo archivo de práctica referido: `caos-heredado/estrenos-incaa.csv` y `plantillas/resumen-prensa.md` (crear en unidad 9). Comandos /clase-2-1 a /clase-2-3.
 - [ ] Unidad 4: Clase 3 · PUBLICAR (pages/clase-3/)
 - [ ] Unidad 5: Clase 4 · POTENCIAR+MOSTRAR (pages/clase-4/)
 - [ ] Unidad 6: Las 5 verticales (pages/verticales/)
@@ -59,7 +59,7 @@ Recursos                  → recap por clase, cheat sheet, glosario
 
 ## Próximo paso concreto
 
-**Unidad 3: escribir pages/clase-2/ (EXPERIMENTAR)** con index + 3 páginas: los-5-patrones (fuente: `git show cbb7599:pages/fundamentals/working-with-files.mdx`), agentes-en-paralelo (fuente: `agents.mdx`), ejercicios-por-vertical (contenido nuevo, un ejercicio concreto por cada una de las 5 verticales de CONTEXTO-TALLER.md). Agregar "clase-2" a pages/_meta.ts. Commit al terminar.
+**Unidad 4: escribir pages/clase-3/ (PUBLICAR)** con index + 4 páginas: planificar-tu-proyecto (fuente: `git show cbb7599:pages/vibe-coding/setup.mdx` y `plan.mdx`), construir-e-iterar (fuente: `build-iterate.mdx`), github-sin-dolor (fuente: `github.mdx`), deploy-tu-url (fuente: `go-live.mdx`). El proyecto narrativo: el quiz "¿Qué clásico del cine argentino sos?" que salva a Butaca. Agregar "clase-3" a pages/_meta.ts. Commit al terminar.
 
 ## Convenciones fijadas (respetar en todo el contenido)
 

@@ -1,0 +1,102 @@
+---
+title: '2.1 Los 5 patrones con archivos | Clase 2'
+description: 'Los cinco patrones de trabajo con archivos en Claude Code: extraer, sintetizar, aplicar plantillas, analizar imágenes e investigar en la web.'
+keywords: 'claude code patrones archivos, claude code extraer informacion, claude code sintetizar, claude code plantillas, claude code investigacion web'
+---
+
+## 2.1 · Los 5 patrones con archivos
+
+- **Tiempo:** 25 minutos
+
+> **Lección interactiva:** escribí `/clase-2-1` en Claude Code
+
+Casi todo lo que vas a hacer con Claude Code y archivos entra en cinco patrones. Aprendelos como movimientos de base: después los combinás.
+
+## Patrón 1: un archivo → extraer
+
+Le señalás un archivo desordenado y le pedís que saque lo que importa, estructurado.
+
+**Ejemplo del taller:**
+```
+Leé @caos-heredado/notas-del-editor-anterior.md y extraé las tareas
+pendientes y las ideas sueltas en un archivo nuevo en ordenado/
+```
+
+**Dónde más sirve:** minutas de reunión, desgrabaciones de entrevistas, papers, expedientes, mails eternos.
+
+## Patrón 2: una carpeta → sintetizar
+
+Le señalás una carpeta ENTERA y le pedís que encuentre patrones entre todos los archivos.
+
+**Ejemplo del taller:**
+```
+Mirá @caos-heredado/comentarios-lectores/ y sintetizá los temas que se
+repiten en los cuatro meses. Guardalo en ordenado/sintesis-lectores.md
+```
+
+**Dónde más sirve:** respuestas de encuestas, tickets de soporte, notas de campo, correcciones de parciales, comentarios en redes. Cualquier lugar donde los patrones se esconden en el volumen.
+
+Imaginate hacerlo a mano: abrir archivo por archivo, tomar notas, cruzar. Esto tarda segundos y funciona igual con 4 archivos que con 400.
+
+## Patrón 3: aplicar plantilla
+
+Un archivo aporta el contenido, otro define el formato. Claude combina.
+
+**Ejemplo del taller:**
+```
+Armá el informe para la dirección con @ordenado/sintesis-lectores.md
+siguiendo el formato de @plantillas/informe-direccion.md
+```
+
+**Dónde más sirve:** informes semanales, propuestas a clientes, planillas de cátedra, escritos con formato fijo. Guardá tus formatos una vez y no vuelvas a pelearte con la estructura.
+
+## Patrón 4: imagen → analizar
+
+Claude ve imágenes. Pegalas directo en la conversación.
+
+> **Importante:** se pega con `Ctrl + V`. También en Mac: Ctrl, no Cmd.
+
+**Ejemplo del taller:** la placa de promoción de la newsletter de Butaca. Genérica, sin identidad, podría ser de cualquier medio. Pegásela a Claude y pedile que la destroce con cariño:
+
+```
+Mirá esta placa y decime por qué no funciona. Sé brutal.
+```
+
+**Dónde más sirve:** capturas de pantalla de errores, diseños de la competencia, gráficos de un PDF, fotos de pizarrones después de una reunión, flyers.
+
+## Patrón 5: web → investigar
+
+Claude busca en internet, lee y sintetiza por vos.
+
+**Ejemplo del taller:**
+```
+Buscá qué están haciendo bien las newsletters culturales en español
+que crecen. Quiero 5 aprendizajes concretos aplicables a Butaca.
+```
+
+**Dónde más sirve:** investigación de competencia, antecedentes de un tema, estado del arte, tendencias. Se terminaron las 97 pestañas abiertas.
+
+## Combinar patrones: acá está la magia
+
+Los patrones se encadenan en un solo pedido:
+
+```
+Leé @ordenado/sintesis-lectores.md, buscá en la web qué hacen las
+newsletters culturales exitosas, y armá una propuesta de relanzamiento
+siguiendo el formato de @plantillas/informe-direccion.md
+```
+
+Eso es extraer + investigar + plantilla en una sola orden. Un trabajo de dos días, antes del almuerzo.
+
+## Buenas prácticas
+
+- **Sé específico** con lo que querés extraer ("las cifras de espectadores", no "lo importante")
+- **Decile dónde guardar** el resultado ("en ordenado/", "como archivo nuevo", "agregalo al final de...")
+- **Usá plantillas** para todo lo que tenga formato recurrente
+- **Pedile la fuente**: cuando investiga en la web, que te liste los links
+
+---
+
+## Siguiente lección
+
+**[2.2 · Agentes en paralelo →](/clase-2/agentes-en-paralelo)**: por qué procesar 10 archivos tarda lo mismo que procesar uno.

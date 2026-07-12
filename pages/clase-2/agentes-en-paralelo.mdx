@@ -1,0 +1,117 @@
+---
+title: '2.2 Agentes en paralelo | Clase 2'
+description: 'Qué son los agentes de Claude Code y cómo usarlos para procesar muchos archivos o investigar varias cosas al mismo tiempo.'
+keywords: 'claude code agentes, claude code paralelo, claude code procesamiento lote, agentes ia español'
+---
+
+## 2.2 · Agentes en paralelo
+
+- **Tiempo:** 20 minutos
+
+> **Lección interactiva:** escribí `/clase-2-2` en Claude Code
+
+## Qué son los agentes
+
+**Copias independientes de Claude trabajando al mismo tiempo.** Como clonarte para atacar varias tareas en simultáneo: cada agente labura por su cuenta y al final los resultados se juntan.
+
+## Secuencial vs paralelo
+
+| Enfoque | 10 tareas de 5 minutos |
+|---------|------------------------|
+| **Secuencial** (sin agentes) | Tarea 1, después la 2, después la 3... = **50 minutos** |
+| **Paralelo** (con agentes) | Las 10 a la vez = **5 minutos** |
+
+## Cuándo usarlos
+
+**Sirven para:**
+- Muchos archivos parecidos (20 desgrabaciones, 15 expedientes, 30 notas)
+- Investigar varias cosas independientes (5 medios de la competencia, 3 convocatorias)
+- Análisis multi-fuente (comentarios + datos + prensa, cada uno por su lado)
+- Generar documentos en lote (fichas de 20 películas a partir de los datos del INCAA)
+
+**No sirven para:**
+- Una sola tarea (usá Claude normal)
+- Trabajo encadenado (si el paso 2 depende del paso 1, no hay paralelo posible)
+- Cosas que tardan segundos de todos modos
+
+## Cómo pedirlos
+
+| Estilo | Ejemplo |
+|--------|---------|
+| **Explícito** | "Lanzá 4 agentes para procesar estos archivos" |
+| **Implícito** | "Analizá estos medios en paralelo" |
+| **Especializado** | "Un agente para los comentarios, otro para los datos del INCAA, otro para las newsletters viejas" |
+| **Que decida Claude** | "Procesá todo lo que hay en caos-heredado/" |
+
+## Los patrones de orquestación
+
+### Repartir lo mismo
+La misma tarea sobre muchos archivos.
+```
+Procesá los 4 archivos de @caos-heredado/comentarios-lectores/ con
+agentes en paralelo, extraé las quejas de cada mes, juntá todo en una lista
+```
+
+### Roles especializados
+Cada agente analiza una fuente distinta.
+```
+Tres agentes en paralelo: uno analiza los comentarios de lectores, otro
+los datos del INCAA, otro las newsletters viejas. Cada uno escribe su
+diagnóstico en ordenado/
+```
+
+### Investigación paralela
+Varias entidades investigadas a la vez.
+```
+Investigá en paralelo cómo cubren el cine argentino estos 4 medios y
+armame una tabla comparativa
+```
+
+### Generación en lote
+Muchos documentos parecidos de una.
+```
+Generá una ficha por cada una de estas 10 películas usando los datos
+del INCAA, con agentes
+```
+
+## El paso que nadie puede saltear: la síntesis
+
+**SIEMPRE cerrá el pedido con la síntesis:**
+
+```
+Cuando terminen todos los agentes, sintetizá los hallazgos en
+ordenado/diagnostico-final.md
+```
+
+Los resultados crudos de cada agente son la mitad del trabajo. Los patrones aparecen cuando se cruzan.
+
+## Qué puede y qué no puede cada agente
+
+| Cada agente TIENE | Cada agente NO TIENE |
+|---|---|
+| Acceso a todos tus archivos | Comunicación con los otros agentes |
+| Todas las capacidades de Claude | Idea de qué encontraron los demás (hasta la síntesis) |
+| Su propio contexto independiente | Memoria de tu conversación principal |
+
+## Problemas típicos
+
+| Problema | Solución |
+|----------|----------|
+| No trabajan en paralelo | Pedilo explícito: "al mismo tiempo", "en paralelo" |
+| Resultados con formatos distintos | Dales una plantilla de salida clara |
+| Lanzó demasiados | Especificá el número exacto de agentes |
+| Quedó todo suelto | Te faltó pedir la síntesis final |
+
+## Dónde más sirve
+
+- **Búsqueda laboral**: analizar 10 avisos a la vez y cruzarlos con tu CV
+- **Evaluación de proveedores o convocatorias**: 5 opciones investigadas en paralelo
+- **Lecturas acumuladas**: 20 artículos guardados, resumidos de una
+- **Búsqueda de departamento**: 8 avisos analizados en simultáneo
+- **Planificar un viaje**: vuelos, alojamiento, actividades y comida, todo a la vez
+
+---
+
+## Siguiente lección
+
+**[2.3 · Ejercicios por vertical →](/clase-2/ejercicios-por-vertical)**: los patrones aplicados a TU trabajo, sea cual sea.
