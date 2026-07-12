@@ -8,5 +8,6 @@ export default
   "clase-4": "Clase 4 · POTENCIAR + MOSTRAR",
   "verticales": "Las 5 verticales",
   "faq": "Preguntas frecuentes",
+  "recursos": "Recursos",
   "search": "Buscar"
 }

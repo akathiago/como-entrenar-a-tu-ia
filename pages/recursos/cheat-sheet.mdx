@@ -1,0 +1,93 @@
+---
+title: 'Cheat sheet | Cómo entrenar a tu IA'
+description: 'Todos los comandos, atajos y patrones de Claude Code del taller en una sola página. Para imprimir o dejar abierta.'
+keywords: 'claude code cheat sheet español, claude code comandos lista, claude code chuleta'
+---
+
+# Cheat sheet
+
+Todo el taller en una página. Imprimila, pegala al lado del monitor, no la pierdas.
+
+## Arrancar
+
+| Qué | Cómo |
+|-----|------|
+| Abrir Claude Code | Terminal en la carpeta del proyecto → `claude` |
+| Abrir terminal en una carpeta (Windows) | Explorador → barra de dirección → escribir `powershell` → Enter |
+| Retomar sesión anterior | `/resume` |
+| Chequeo de salud | `/doctor` |
+
+## Referenciar
+
+| Qué | Cómo |
+|-----|------|
+| Un archivo | `@archivo.md` |
+| Una carpeta entera | `@carpeta/` |
+| Una imagen | Copiarla y pegarla con `Ctrl + V` (también en Mac) |
+
+## Controlar
+
+| Qué | Cómo |
+|-----|------|
+| Frenar a Claude | `Escape` |
+| Rebobinar (conversación y/o archivos) | `Escape × 2` |
+| Cambiar de modo (normal / auto / plan) | `Shift + Tab` |
+| Conversación nueva | `/clear` |
+| Ver consumo de cuota | `/usage` |
+| Que piense más fuerte | `think` / `think harder` / `ultrathink` |
+
+## Los 5 patrones
+
+| Patrón | Esqueleto del prompt |
+|--------|---------------------|
+| Extraer | "Leé @archivo y extraé [X] en un archivo nuevo" |
+| Sintetizar | "Mirá @carpeta/ y encontrá los patrones que se repiten" |
+| Plantilla | "Armá [X] con @contenido siguiendo @plantillas/formato.md" |
+| Imagen | [Ctrl+V] "Analizá esto y decime [X]" |
+| Web | "Buscá en la web [X] y traeme [N] hallazgos con fuentes" |
+
+## Agentes
+
+```
+[N] agentes en paralelo: [tarea por agente].
+Cuando terminen, sintetizá todo en @resultado.md
+```
+
+## Memoria
+
+| Qué | Dónde |
+|-----|-------|
+| Constitución del proyecto | `CLAUDE.md` en la raíz (se crea con `/init`) |
+| Tus preferencias globales | `~/.claude/CLAUDE.md` |
+| Regla al vuelo en una sesión | Mensaje que empieza con `#` |
+
+## Personalizar
+
+| Qué | Dónde/Cómo |
+|-----|-----------|
+| Comandos propios | Archivos en `.claude/commands/` (reiniciar Claude Code después) |
+| Sub-agentes (consejo asesor) | `/agents` o archivos en `.claude/agents/` |
+| Conectar con otras apps | MCP: "quiero conectar Claude Code con [app], guiame" |
+
+## Publicar (el loop)
+
+1. "Entrevistame y armá REQUISITOS.md"
+2. Modo Plan (`Shift + Tab`) → aprobar → construir
+3. Iterar con capturas (`Ctrl + V`)
+4. "Creá un repo privado en GitHub y subí todo"
+5. "Publicá en Vercel" → URL real
+
+## Las frases que salvan
+
+```
+¿Qué acabás de hacer y dónde lo guardaste?
+```
+```
+Explicame esto como si no supiera nada de tecnología
+```
+```
+Si el dato no está, decímelo. No inventes.
+```
+```
+[error pegado tal cual] ¿Qué significa esto y cómo lo arreglamos?
+```
