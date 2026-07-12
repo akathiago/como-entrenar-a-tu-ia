@@ -1,0 +1,82 @@
+---
+title: '3.2 Construir e iterar | Clase 3'
+description: 'Claude Code construye tu proyecto desde los requisitos y vos lo refinás con capturas de pantalla. Servidor local, localhost y modo Plan explicados.'
+keywords: 'claude code construir app, localhost explicado, servidor desarrollo, iterar con capturas, npm run dev'
+---
+
+## 3.2 · Construir e iterar
+
+- **Tiempo:** 30-40 minutos
+
+> **Lección interactiva:** escribí `/clase-3-2` en Claude Code
+
+## Qué pasa en esta lección
+
+Claude toma tu `REQUISITOS.md`, arma el proyecto y lo construye. Vos lo mirás en el navegador y lo vas afinando hasta que esté como querés. Acá es donde el quiz de Butaca (o tu proyecto) pasa de idea a cosa que funciona.
+
+## El servidor local: tu ensayo general
+
+Para ver tu proyecto mientras lo construís, Claude levanta un **servidor de desarrollo** en tu computadora:
+
+- Solo funciona en TU máquina, nadie más lo ve
+- Sirve para probar e iterar antes de publicar
+- Tiene que quedar corriendo mientras mirás el sitio
+- Se apaga con `Ctrl + C` en la terminal
+
+## Qué es localhost
+
+`localhost:3000` quiere decir "mi propia computadora, puerta 3000". **No es una URL real**: si le mandás ese link a alguien, no va a ver nada. La URL de verdad llega en la lección 3.4.
+
+## Usá el modo Plan
+
+Para construcciones grandes, activá el modo Plan con **Shift + Tab**: Claude te muestra el plan completo antes de escribir una línea. Leelo, preguntá, corregí y recién ahí aprobá. Es la mejor herramienta para no programadores: el plan está en castellano.
+
+## Iterar es el trabajo, no un fracaso
+
+La primera versión nunca es la final. Así funciona el desarrollo profesional: construir → mirar → refinar → repetir. La diferencia con la IA es que cada vuelta tarda segundos en vez de días. No te conformes: pedile cambios hasta que te guste de verdad.
+
+Pedidos de iteración típicos:
+
+```
+El título se pierde. Hacelo mucho más grande y con más aire alrededor.
+```
+
+```
+En el celular se ve todo apretado. Arreglalo.
+```
+
+```
+El botón de "siguiente" tendría que estar deshabilitado hasta que elija
+una respuesta.
+```
+
+## El truco de la captura
+
+**Ctrl + V** pega imágenes directo en Claude Code (también en Mac es Ctrl).
+
+El circuito ganador para iterar:
+
+1. Sacale captura a lo que está mal
+2. Marcá el problema con un círculo o una flecha (con cualquier editor de imágenes)
+3. Pegala y describí qué querés distinto
+
+El feedback visual le gana siempre a la descripción con palabras. "Esto de acá" con una flecha vale más que tres párrafos.
+
+## Problemas típicos
+
+| Problema | Solución |
+|----------|----------|
+| "npm: command not found" | Falta Node.js. Bajalo de [nodejs.org](https://nodejs.org), instalalo y reiniciá la terminal. Claude también puede guiarte. |
+| "Port 3000 already in use" | Otra terminal tiene un servidor corriendo. Cerrala, o pedile a Claude que use otro puerto. |
+| No se abrió el navegador | Entrá a mano a [http://localhost:3000](http://localhost:3000) |
+| Página en blanco | Mirá la terminal: si hay texto rojo, copiáselo a Claude. También F12 en el navegador → pestaña Console. |
+| Los cambios no aparecen | ¿Refrescaste el navegador? ¿El servidor sigue corriendo? |
+| Los estilos se ven raros | Refrescá con `Ctrl + Shift + R` (Mac: `Cmd + Shift + R`) o probá en ventana de incógnito |
+
+**La regla de oro con los errores:** no los interpretes, copiáselos a Claude tal cual. Los mensajes de error son para Claude, no para vos.
+
+---
+
+## Siguiente lección
+
+**[3.3 · GitHub sin dolor →](/clase-3/github-sin-dolor)**: respaldá tu proyecto antes de publicarlo.

@@ -1,0 +1,73 @@
+---
+title: '3.3 GitHub sin dolor | Clase 3'
+description: 'Qué es el control de versiones, la diferencia entre Git y GitHub, y cómo respaldar tu proyecto en la nube sin escribir comandos.'
+keywords: 'github para principiantes español, git vs github, control de versiones explicado, respaldar proyecto'
+---
+
+## 3.3 · GitHub sin dolor
+
+- **Tiempo:** 15 minutos
+
+> **Lección interactiva:** escribí `/clase-3-3` en Claude Code
+
+## Qué es el control de versiones
+
+Un sistema que registra cada cambio de tus archivos a lo largo del tiempo. Como el "control de cambios" de Word, pero para proyectos enteros:
+
+- Ves el historial completo de cambios
+- Podés volver a cualquier versión anterior
+- Deshacés errores sin drama
+
+Es la solución definitiva al problema `informe_final_v3_AHORA-SI-FINAL.docx`.
+
+## Git vs GitHub
+
+Parecidos, no iguales:
+
+- **Git** = el sistema de control de versiones que corre en tu computadora. Registra los cambios localmente.
+- **GitHub** = el sitio web donde se guardan tus repositorios en la nube.
+
+Analogía: Git es Word (la herramienta), GitHub es Google Drive (donde se guarda y comparte).
+
+## Vocabulario mínimo
+
+| Término | Qué significa |
+|---------|---------------|
+| **Repositorio (repo)** | Una carpeta de proyecto con historial |
+| **Commit** | Una foto del proyecto en un momento dado |
+| **Push** | Subir tus commits a GitHub |
+| **Pull** | Bajar los cambios de GitHub a tu máquina |
+
+No hace falta memorizar comandos: le decís a Claude "guardá esto en GitHub" y listo. El vocabulario es para entender qué está haciendo.
+
+## Por qué lo necesitás para publicar
+
+Hoy tu proyecto existe solo en tu computadora. Si la laptop muere, murió el proyecto.
+
+Y más importante: los servicios de publicación necesitan tomar tu código de algún lado. Ese lado es GitHub. En la próxima lección, Vercel se conecta a tu repo y publica desde ahí.
+
+## El GitHub CLI
+
+`gh` es la herramienta de línea de comandos para GitHub. Claude la usa por vos: crea el repo, hace los commits y sube todo. Vos solo pasás por la autenticación, que es una vez sola: aparece un código, lo pegás en el sitio de GitHub, autorizás y ya.
+
+El pedido completo, en castellano:
+
+```
+Creá un repositorio privado en GitHub para este proyecto y subí todo
+```
+
+## Problemas típicos
+
+| Problema | Solución |
+|----------|----------|
+| "gh: command not found" | Falta el GitHub CLI. Windows: bajalo de [cli.github.com](https://cli.github.com). Mac: `brew install gh`. Claude te guía. |
+| Falló la autenticación | Corré `gh auth login` de nuevo y completá el paso del navegador: código + botón "Authorize" |
+| "Repository already exists" | Ya tenés un repo con ese nombre. Elegí otro nombre o borrá el viejo en github.com |
+| "Permission denied" | Se venció la autenticación. `gh auth login` otra vez. |
+| No encuentro el repo en github.com | Fijate que estés logueado con la cuenta correcta en el navegador |
+
+---
+
+## Siguiente lección
+
+**[3.4 · Deploy: tu URL real →](/clase-3/deploy-tu-url)**: el momento en que tu proyecto se vuelve real.

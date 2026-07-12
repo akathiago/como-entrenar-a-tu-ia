@@ -1,0 +1,75 @@
+---
+title: '3.1 Planificar tu proyecto | Clase 3'
+description: 'El mindset del vibecoding, el loop de construcción y cómo definir requisitos claros antes de construir con Claude Code.'
+keywords: 'vibecoding español, claude code planificar, requisitos proyecto ia, claude code construir sitio'
+---
+
+## 3.1 · Planificar tu proyecto
+
+- **Tiempo:** 25 minutos
+
+> **Lección interactiva:** escribí `/clase-3-1` en Claude Code
+
+## Qué es el vibecoding
+
+Construir software describiendo lo que querés en vez de escribiendo código. El término lo popularizó Andrej Karpathy: entregarse a la corriente, describir el resultado y dejar que la IA resuelva la implementación.
+
+La habilidad no es programar. Es:
+
+- Tener claro qué querés
+- Dar feedback preciso
+- Darte cuenta cuándo algo está bien
+
+Es la misma dinámica de trabajar con un diseñador, una agencia o un equipo de desarrollo: vos sabés QUÉ, el otro resuelve CÓMO. Acá el otro es Claude, trabaja al toque y no se ofende con las correcciones.
+
+## El loop de construcción
+
+Todo proyecto sigue el mismo circuito:
+
+1. **Planificar** → tener claro qué estás construyendo
+2. **Construir** → Claude lo crea
+3. **Iterar** → afinar hasta que esté bien
+4. **Guardar** → respaldar en GitHub
+5. **Publicar** → subirlo a internet con URL real
+
+Este loop sirve para todo: un sitio personal, un dashboard, una trivia, una herramienta de trabajo. Lo aprendés una vez con el quiz de Butaca y lo repetís con lo que quieras.
+
+## Los requisitos: el contrato
+
+Antes de construir hay que definir qué se construye. Instrucciones vagas dan resultados inesperados; requisitos específicos dan lo que querías.
+
+En la lección interactiva, **Claude te entrevista a vos**: qué hace la herramienta, cómo se ve, qué pasa cuando el usuario hace cada cosa. Al final, todas tus decisiones quedan en un archivo: `REQUISITOS.md`. Ese archivo es el contrato desde el que Claude construye.
+
+## La "lógica": el si-esto-entonces-aquello
+
+La lógica son las reglas de comportamiento de tu herramienta. Toda app tiene:
+
+- Si el lector aprieta el botón → pasa a la siguiente pregunta
+- Si eligió la respuesta A → suma un punto para "Esperando la carroza"
+- Si un resultado tiene más puntos que el resto → ese es tu clásico
+
+Vos definís las reglas en castellano. Claude las convierte en código. Los quizzes, los recomendadores y los tests de personalidad usan todos el mismo patrón: respuestas que suman puntos, resultado con más puntos gana. No se programa: se decide.
+
+## Los previews visuales
+
+"Moderno" quiere decir cosas distintas para cada persona. Describir estética con palabras es una trampa.
+
+La solución: pedirle a Claude que genere 3 o 4 archivos HTML con estilos visuales distintos y abrirlos en el navegador. Elegís el que te gusta, o mezclás ("la tipografía del 2 con los colores del 3"). Ver es más rápido que describir.
+
+```
+Antes de construir, generame 3 previews HTML con estilos visuales
+distintos para el quiz: uno sobrio editorial, uno retro de cine,
+uno lúdico. Los quiero ver en el navegador.
+```
+
+## Dos conceptos para no marearse
+
+**Framework:** una base pre-construida para no arrancar de cero, como el esqueleto de una casa. Usamos **Next.js**, que se lleva perfecto con Vercel (donde vamos a publicar). No necesitás entenderlo, solo saber que existe.
+
+**JavaScript:** el idioma en que están escritas las páginas interactivas. No lo vas a aprender: Claude lo escribe por vos.
+
+---
+
+## Siguiente lección
+
+**[3.2 · Construir e iterar →](/clase-3/construir-e-iterar)**: Claude construye tu proyecto y vos lo afinás hasta quererlo.

@@ -1,0 +1,86 @@
+---
+title: '3.4 Deploy: tu URL real | Clase 3'
+description: 'Publicá tu proyecto en internet con Vercel y conseguí una URL real para compartir. Deploy explicado para no programadores.'
+keywords: 'deploy vercel español, publicar sitio web ia, hosting gratis vercel, deploy explicado principiantes'
+---
+
+## 3.4 · Deploy: tu URL real
+
+- **Tiempo:** 15 minutos
+
+> **Lección interactiva:** escribí `/clase-3-4` en Claude Code
+
+## Qué es el deploy
+
+Deploy es llevar tu proyecto de tu computadora a internet. Tu código pasa de tu máquina a servidores que cualquiera puede visitar, con una URL real.
+
+Es EL momento. Todo lo anterior era ensayo: esto es el estreno.
+
+## Qué es el hosting
+
+Servidores que corren tu proyecto las 24 horas y atienden a los visitantes. No los administrás vos: el servicio de hosting se encarga de todo. Vos solo entregás el código.
+
+## Qué es Vercel
+
+El servicio de hosting que usamos en el taller:
+
+- **Gratis** para proyectos personales (el plan free es generoso)
+- **Hecho por los creadores de Next.js**: se llevan perfecto
+- **Conectado a GitHub**: se actualiza solo cuando subís cambios
+
+Le das tu repo de GitHub → construye tu proyecto → te da una URL tipo `tuproyecto.vercel.app`.
+
+## La magia del auto-deploy
+
+Después de la configuración inicial:
+
+1. Cambiás algo en tu proyecto
+2. Le pedís a Claude que lo suba a GitHub
+3. Vercel detecta el cambio y republica solo
+4. Tu sitio se actualiza en un minuto
+
+Sin pasos manuales. Cambio → push → está online.
+
+## El pedido completo
+
+```
+Publicá este proyecto en Vercel. Guiame con la autenticación si hace falta.
+```
+
+Claude usa el Vercel CLI y te va llevando. Igual que con GitHub, autenticás una vez por el navegador y no lo pensás más.
+
+## Problemas típicos
+
+| Problema | Solución |
+|----------|----------|
+| "vercel: command not found" | Falta el CLI: pedile a Claude que lo instale (`npm i -g vercel`) |
+| Falló la autenticación | `vercel login` de nuevo y completá el paso del navegador |
+| Build failed | Copiale a Claude el error del dashboard de Vercel: casi siempre lo arregla solo |
+| El sitio muestra la versión vieja | Está terminando de construir. Esperá un minuto y refrescá. |
+| Funciona en localhost pero no en Vercel | Pedile a Claude que revise los build logs de Vercel |
+
+## Después del estreno
+
+1. **Probalo en el celular**: la misma URL anda en cualquier dispositivo
+2. **Compartilo**: mandá el link al grupo del taller, a tu familia, a quien quieras
+3. **Actualizá cuando quieras**: cambio → push → se publica solo
+
+## El loop completo, ahora tuyo
+
+| Paso | Qué significa |
+|------|---------------|
+| **Planificar** | Tener claro qué construís (REQUISITOS.md) |
+| **Construir** | Claude lo crea |
+| **Iterar** | Afinar con capturas hasta que te guste |
+| **Guardar** | Respaldar en GitHub |
+| **Publicar** | Deploy en Vercel, URL real |
+
+Este circuito sirve para cualquier proyecto de cualquier vertical. Ya no es teoría: lo acabás de hacer.
+
+---
+
+## Terminaste la Clase 3
+
+Butaca tiene su herramienta interactiva publicada y vos tenés una URL con tu nombre. La sección está oficialmente viva de nuevo.
+
+**Siguiente: [Clase 4 · POTENCIAR + MOSTRAR →](/clase-4)**: sub-agentes, automatización y la muestra final. *(disponible a medida que avanza el taller)*
