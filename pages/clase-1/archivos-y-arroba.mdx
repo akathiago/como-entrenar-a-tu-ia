@@ -12,13 +12,21 @@ keywords: 'claude code arroba, claude code archivos, claude code workspace visua
 
 ## El problema de trabajar a ciegas
 
-Claude Code vive en la terminal. Le pedís que cree un documento y te dice "listo, lo creé". ¿Dónde? ¿Qué dice? ¿Lo hizo bien? Trabajar así es como dictarle a alguien que está en otra habitación.
+Le pedís a Claude que cree un documento y te dice "listo, lo creé". ¿Dónde? ¿Qué dice? ¿Lo hizo bien? Trabajar así es como dictarle a alguien que está en otra habitación.
 
-**La solución:** abrir un editor visual al lado de la terminal, en pantalla partida. Terminal a un lado, tus archivos al otro. Así:
+**La solución:** tener los archivos a la vista mientras Claude trabaja. Así:
 
 - Ves los archivos aparecer mientras Claude los crea
 - Leés los documentos mientras Claude sigue trabajando
 - Verificás que todo esté donde tiene que estar
+
+Cómo se arma depende de [dónde estés usando Claude Code](/antes-de-empezar/que-es-claude-code):
+
+| Superficie | Cómo lo armás |
+|------------|---------------|
+| **Terminal** | Pantalla partida: la terminal de un lado, el editor del otro |
+| **Panel de VS Code** | Ya lo tenés: Claude en la barra lateral, tus archivos al lado. Abrí el explorador de archivos y listo |
+| **App de escritorio** | Abrí VS Code (o el Explorador) en la carpeta del taller y ponelo al lado de la ventana de Claude |
 
 ## Elegí tu visor
 
@@ -30,7 +38,7 @@ Cualquiera de estos sirve. No lo pienses demasiado: es un visor de archivos, no 
 | **Obsidian** (gratis) | Ya lo usás para notas | Muy lindo para leer markdown, pero no muestra carpetas ocultas como `.claude/` |
 | **Explorador de Windows + Bloc de notas** | No querés instalar nada hoy | Alcanza para arrancar, te va a quedar chico rápido |
 
-**Setup en dos minutos (VS Code):** abrilo, File → Open Folder, elegí la carpeta `taller-ia`. Acomodá las ventanas: terminal a la izquierda, VS Code a la derecha.
+**Setup en dos minutos (VS Code):** abrilo, File → Open Folder, elegí la carpeta `taller-ia`. Si estás en la terminal, acomodá las ventanas: terminal a la izquierda, VS Code a la derecha.
 
 **Probalo:** pedile a Claude *"Creá un archivo llamado prueba.md con un saludo adentro"* y miralo aparecer en el editor. Sin refrescar nada. Esa es la sensación de trabajar con visibilidad.
 

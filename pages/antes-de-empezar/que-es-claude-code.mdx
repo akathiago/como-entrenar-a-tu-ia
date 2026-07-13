@@ -13,8 +13,12 @@ keywords: 'que es claude code, claude code explicado, claude code vs chatgpt, cl
 Claude Code es una IA que trabaja **en tu computadora**, no en una pestaña del navegador.
 
 - **No es solo para programar.** Es un asistente de propósito general: lee archivos, analiza datos, escribe documentos, arma sitios web.
-- **Vive en la terminal**, pero vos solo tenés conversaciones. La terminal es la ventanita negra, nada más que eso.
+- **Se usa desde la terminal**, pero también desde VS Code o desde la app de escritorio. Vos, en cualquiera de las tres, solo tenés conversaciones.
 - **El único comando que tenés que saber de memoria:** `claude`
+
+<small>
+*O, si sos temerario: `claude --dangerously-skip-permissions`. Arranca en modo "hacé lo que quieras": no te pide permiso antes de editar archivos ni de correr comandos, se manda solo. Es más rápido, y también se manda cualquiera más rápido. Para una carpeta de práctica donde no hay nada que perder, es cómodo. En una carpeta con tus cosas de verdad, no.*
+</small>
 
 ## "Pará, ¿la terminal? Eso es de hackers"
 
@@ -25,6 +29,29 @@ El cambio de cabeza es este:
 > De "tengo que aprender comandos" a "tengo que saber qué quiero".
 
 No estás aprendiendo a programar. Estás aprendiendo a **dirigir**: describís el resultado que necesitás y la máquina resuelve el cómo.
+
+## Dónde corre Claude Code: hay tres puertas
+
+Es el mismo Claude Code en los tres lados. Elegís la puerta que te resulte más cómoda:
+
+| Dónde | Cómo es | Para quién |
+|-------|---------|------------|
+| **Terminal** | La ventanita negra. Escribís `claude` y listo. | El camino que recomiendo, y el que sigue el taller |
+| **Panel de VS Code** | Claude vive en una barra lateral del editor, al lado de tus archivos | Si querés una **mesa de trabajo digital**: los archivos, el editor y Claude a la vista, todo en la misma ventana |
+| **App de escritorio** | Claude Code adentro de la app de Claude, con botones | Si la terminal te da impresión y querés empezar por lo conocido |
+
+### Por qué recomiendo la terminal
+
+No es purismo ni pose de hacker. La terminal es la versión completa de Claude Code; las otras dos son interfaces que le agregan botones y le sacan cosas.
+
+- **Todo funciona como está escrito acá.** Los atajos de este sitio y de las lecciones son los de la terminal. En las otras superficies hay gestos que cambian: rebobinar es pasar el mouse por un mensaje, cambiar de modo es un clic en un selector.
+- **Atajos que solo existen ahí:** `!` para correr un comando de tu computadora sin salir de Claude, y Tab para autocompletar nombres de archivo.
+- **Cuando algo falla, te enterás.** La terminal te muestra el error completo. En el panel, los procesos largos se ven a medias.
+- **Conectar herramientas externas (MCP)**, que vemos en la Clase 4, se configura desde la terminal.
+
+Lo que sí ganás en VS Code: ves los cambios **lado a lado** antes de aceptarlos, y podés señalar líneas exactas de un archivo. Es cómodo. Pero es un cambio, no una mejora.
+
+Dicho todo eso: **el taller se completa entero desde cualquiera de las tres.** Si la terminal te da impresión y en VS Code o en la app de escritorio arrancás hoy en vez de la semana que viene, arrancá ahí. Claude sabe en cuál estás y te traduce el gesto que corresponda; si algo no existe en tu superficie, te lo dice y te da el camino alternativo. Nadie queda afuera por elegir el botón lindo.
 
 ## Claude Code vs el chatbot de siempre
 
@@ -45,7 +72,7 @@ Ya usaste ChatGPT o la app de Claude. Esto es otra cosa:
 Ejemplos reales del tipo de cosas que hace la gente del taller:
 
 - Tirarle una carpeta con 40 documentos desordenados y pedirle un informe con los hallazgos
-- Convertir un CSV del INCAA en un dashboard interactivo
+- Convertir un CSV caótico en un dashboard interactivo
 - Armar tu sitio personal y publicarlo online en una tarde
 - Automatizar el monitoreo de prensa que hoy te come la mañana
 - Crear un quiz interactivo para tus estudiantes
