@@ -1,6 +1,7 @@
 import React from 'react'
 import { useConfig } from 'nextra-theme-docs'
 import { useRouter } from 'next/router'
+import { ThemeSwitch } from './components/theme-switch'
 
 const SITE_NAME = 'Cómo entrenar a tu IA'
 // LINK-PENDIENTE: reemplazar cuando se defina dónde se publica el sitio
@@ -34,8 +35,9 @@ export default {
     )
   },
   nextThemes: {
-    defaultTheme: 'system'
+    defaultTheme: 'dark'
   },
+  gitTimestamp: null,
   head: function Head() {
     const { frontMatter, title } = useConfig()
     const { asPath } = useRouter()
@@ -105,7 +107,7 @@ export default {
   primarySaturation: 0,
   darkMode: true,
   themeSwitch: {
-    useOptions: () => ({ light: 'Claro', dark: 'Oscuro', system: 'Sistema' })
+    component: ThemeSwitch
   },
   search: {
     placeholder: 'Buscar en el material…',
