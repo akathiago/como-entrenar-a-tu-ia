@@ -51,4 +51,6 @@ Preguntale a Claude. En serio: esa es toda la gracia.
 
 ## Créditos
 
-Taller de Anfibia Escuela, dictado por Thiago. Estructura pedagógica adaptada del curso [Claude Code for Everyone](https://ccforeveryone.com) de Carl Vellotti (CC BY-NC-ND 4.0).
+Taller de Anfibia Escuela, dictado por Thiago.
+
+<sub>Estructura pedagógica adaptada de [Claude Code for Everyone](https://ccforeveryone.com) de Carl Vellotti, bajo licencia CC BY-NC-ND 4.0.</sub>

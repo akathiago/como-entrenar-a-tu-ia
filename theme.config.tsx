@@ -29,24 +29,7 @@ export default {
   footer: {
     content: (
       <span>
-        © {new Date().getFullYear()} Anfibia Escuela · Taller "Cómo entrenar a tu IA".
-        Adaptado de{' '}
-        <a
-          href="https://github.com/carlvellotti/claude-code-everyone-course"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Claude Code for Everyone
-        </a>{' '}
-        de Carl Vellotti, bajo licencia{' '}
-        <a
-          href="https://creativecommons.org/licenses/by-nc-nd/4.0/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          CC BY-NC-ND 4.0
-        </a>
-        .
+        © {new Date().getFullYear()} Anfibia Escuela · Taller "Cómo entrenar a tu IA"
       </span>
     )
   },
