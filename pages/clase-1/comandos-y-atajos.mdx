@@ -20,6 +20,7 @@ Los comandos que empiezan con `/` son órdenes directas para Claude Code (no par
 |---------|----------|
 | `/clear` | Conversación nueva, de cero (los archivos quedan, el chat se borra) |
 | `/resume` | Retoma una conversación anterior después de cerrar |
+| `/rewind` | Rebobinar: volver atrás la conversación, los archivos, o las dos cosas |
 | `/help` | Lista de todos los comandos |
 
 ### Sesión y contexto
@@ -46,14 +47,33 @@ Apretá **Escape** y Claude frena en seco, en el medio de lo que esté haciendo.
 
 Usalo sin culpa: si ves que agarró para cualquier lado, frenalo, aclarale y seguí. Siempre tenés el volante.
 
-## Rebobinar: Escape dos veces
+## Rebobinar: el deshacer de Claude Code
 
-Apretá **Escape dos veces** y aparecen las opciones de rewind:
+Claude guarda una foto de tus archivos antes de cada edición, y otra con cada mensaje que le mandás. Rebobinar es elegir un momento del pasado y volver.
 
-- Volver la conversación atrás (los archivos quedan como están)
-- Volver la conversación Y los archivos atrás (deshace los cambios)
+Para entenderlo, pensá que hay **dos líneas de tiempo corriendo en paralelo**: la **conversación** (lo que hablaron) y los **archivos** (lo que quedó escrito). Rebobinar es decidir cuál de las dos volvés atrás:
 
-Es viaje en el tiempo. Ideal para experimentar tranquilo: probá cosas, y si no te gusta, rebobiná.
+| Opción | Qué pasa |
+|--------|----------|
+| **Las dos** | Como si esa parte de la sesión nunca hubiera existido. Es el caso normal. |
+| **Solo los archivos** | Se deshacen los cambios, pero Claude se sigue acordando de todo lo que hablaron |
+| **Solo la conversación** | Claude se olvida de la charla, los archivos quedan como están |
+
+Cómo se llega, según dónde estés trabajando:
+
+| Superficie | Cómo rebobinar |
+|------------|----------------|
+| **Terminal** | `/rewind`, o `Escape × 2` **con el campo de texto vacío** (si hay texto escrito, el doble Escape borra ese texto) |
+| **Panel de VS Code** | Pasá el mouse por encima de un mensaje anterior y clickeá el botón de rewind |
+| **App de escritorio** | Probá `/rewind` en el menú de comandos |
+
+### Los tres límites (importantes)
+
+- **No deshace lo que se hizo por comandos de terminal.** Si Claude borró un archivo con un comando, ese archivo no vuelve con rewind.
+- **No deshace los cambios que hiciste vos a mano** por fuera de Claude Code.
+- **No reemplaza a Git.** Rebobinar es un "deshacer" de sesión; Git es la historia permanente. Eso lo vemos en la Clase 3.
+
+Con eso claro: experimentá tranquilo. Probá cosas raras. Si no te gusta, rebobinás.
 
 ## Pedirle que piense más
 
@@ -71,7 +91,7 @@ Sirven para decisiones complejas: *"think harder: ¿cómo estructurarías este i
 
 ## Los tres modos de trabajo
 
-Con **Shift + Tab** vas rotando entre tres modos:
+En la terminal, **Shift + Tab** va rotando entre tres modos. (En el panel de VS Code se clickea el indicador de modo abajo del campo de texto; en la app de escritorio, el selector al lado del botón de enviar.)
 
 | Modo | Comportamiento | Cuándo usarlo |
 |------|---------------|---------------|
@@ -92,8 +112,9 @@ Los comandos `/clase-1-1`, `/clase-1-2` del taller no vienen con Claude Code: so
 | Atajo | Acción |
 |-------|--------|
 | `Escape` | Frenar a Claude |
-| `Escape × 2` | Opciones de rebobinado |
-| `Shift + Tab` | Cambiar de modo |
+| `Escape × 2` | Opciones de rebobinado (en la terminal, con el campo de texto vacío) |
+| `/rewind` | Lo mismo, escrito como comando: funciona en cualquier superficie |
+| `Shift + Tab` | Cambiar de modo (en la terminal) |
 | `Ctrl + V` | Pegar imágenes (¡también en Mac es Ctrl, no Cmd!) |
 | `/` | Menú de comandos |
 | `@` | Referenciar archivos |

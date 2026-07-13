@@ -32,13 +32,21 @@ Todo proyecto sigue el mismo circuito:
 4. **Guardar** → respaldar en GitHub
 5. **Publicar** → subirlo a internet con URL real
 
-Este loop sirve para todo: un sitio personal, un dashboard, una trivia, una herramienta de trabajo. Lo aprendés una vez con el quiz de Butaca y lo repetís con lo que quieras.
+Este loop sirve para todo: un sitio personal, un dashboard, una trivia, una herramienta de trabajo. Lo aprendés una vez con Butaca y lo repetís con lo que quieras.
 
 ## Los requisitos: el contrato
 
 Antes de construir hay que definir qué se construye. Instrucciones vagas dan resultados inesperados; requisitos específicos dan lo que querías.
 
-En la lección interactiva, **Claude te entrevista a vos**: qué hace la herramienta, cómo se ve, qué pasa cuando el usuario hace cada cosa. Al final, todas tus decisiones quedan en un archivo: `REQUISITOS.md`. Ese archivo es el contrato desde el que Claude construye.
+En la lección interactiva, **Claude te entrevista a vos**: qué hace cada pieza, cómo se ve, qué pasa cuando el lector hace cada cosa. Al final, todas tus decisiones quedan en un archivo: `REQUISITOS.md`. Ese archivo es el contrato desde el que Claude construye.
+
+### El contrato se escribe por capas
+
+Butaca son tres piezas, y el `REQUISITOS.md` no las describe sueltas: **las ordena**. Primero el quiz, después la portada, después la nota.
+
+Ese orden no es un detalle del documento: es la instrucción que Claude va a seguir cuando construya. Cada capa queda funcionando antes de arrancar la siguiente, y por eso en cualquier momento tenés algo publicable. Si te trabás en la nota, ya tenés el quiz y la portada online. Lo que se evita es llegar al final con tres piezas a medio hacer y nada para mostrar.
+
+> Ordenar el contrato por capas es una decisión del taller para que el proyecto se pueda terminar, no una regla de Claude Code. Es un buen hábito, no un rito.
 
 ## La "lógica": el si-esto-entonces-aquello
 
@@ -58,7 +66,7 @@ La solución: pedirle a Claude que genere 3 o 4 archivos HTML con estilos visual
 
 ```
 Antes de construir, generame 3 previews HTML con estilos visuales
-distintos para el quiz: uno sobrio editorial, uno retro de cine,
+distintos para Butaca: uno sobrio editorial, uno retro de cine,
 uno lúdico. Los quiero ver en el navegador.
 ```
 
