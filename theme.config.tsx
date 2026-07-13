@@ -50,9 +50,6 @@ export default {
       </span>
     )
   },
-  useNextSeoProps() {
-    return { titleTemplate: `%s – ${SITE_NAME}` }
-  },
   nextThemes: {
     defaultTheme: 'system'
   },
@@ -60,9 +57,13 @@ export default {
     const { frontMatter, title } = useConfig()
     const { asPath } = useRouter()
     const isHome = asPath === '/'
+    // Varias páginas ya traen el nombre del sitio en su title de frontmatter:
+    // no se lo agregamos dos veces.
+    const withSiteName = (t: string) =>
+      t.includes(SITE_NAME) ? t : `${t} – ${SITE_NAME}`
     const pageTitle = isHome
       ? `${SITE_NAME} | Taller de Claude Code sin programar – Anfibia Escuela`
-      : (title ? `${title} – ${SITE_NAME}` : SITE_NAME)
+      : (title ? withSiteName(title) : SITE_NAME)
     const description =
       frontMatter?.description ||
       'Taller de Claude Code para no programadores. Aprendé a trabajar con IA desde la terminal: archivos, agentes, automatización y proyectos publicados. Anfibia Escuela.'
@@ -119,11 +120,31 @@ export default {
   },
   primaryHue: 0,
   primarySaturation: 0,
+  darkMode: true,
+  themeSwitch: {
+    useOptions: () => ({ light: 'Claro', dark: 'Oscuro', system: 'Sistema' })
+  },
+  search: {
+    placeholder: 'Buscar en el material…',
+    loading: 'Cargando…',
+    error: 'No se pudo cargar el índice de búsqueda.',
+    emptyResult: (
+      <span className="_block _select-none _p-8 _text-center _text-sm _text-gray-400">
+        No encontramos nada con eso.
+      </span>
+    )
+  },
   sidebar: {
     defaultMenuCollapseLevel: 1,
     toggleButton: true
   },
   toc: {
-    backToTop: true
+    title: 'En esta página',
+    backToTop: 'Volver arriba'
+  },
+  // El default linkea a un issue de GitHub del repo original: lo apagamos
+  // y usamos pages/404.mdx
+  notFound: {
+    content: null
   }
 }

@@ -1,4 +1,4 @@
-# ESTADO.md · Cómo entrenar a tu IA (fase 4 completa)
+# ESTADO.md · Cómo entrenar a tu IA (fases 1-5 completas)
 
 Material complementario del taller "Cómo entrenar a tu IA" (Claude Code para no programadores, Anfibia Escuela). Adaptación del repo claude-code-everyone-course de Carl Vellotti.
 
@@ -6,7 +6,7 @@ Material complementario del taller "Cómo entrenar a tu IA" (Claude Code para no
 
 ---
 
-## Fase actual: FASE 4 completa → sigue FASE 5 (verificación)
+## Fase actual: TODAS LAS FASES COMPLETAS. El sitio buildea y está listo para deploy.
 
 ### Decisiones ya tomadas por Thiago (2026-07-12)
 - Navegación aprobada tal como está abajo.
@@ -39,7 +39,15 @@ Material complementario del taller "Cómo entrenar a tu IA" (Claude Code para no
   - `styles/globals.css` reescrito: títulos Tungsten (fallback Oswald, Google Fonts) en MAYÚSCULAS, prosa Merriweather, UI (sidebar/nav/toc) Roboto, código JetBrains Mono. Paleta blanco y negro vía `--nextra-primary-saturation: 0%` en ambos modos. Eliminados los acentos teal/rojo del autor; links subrayados color heredado; inline code y botón de copiar neutros en dark y light. Se eliminó la regla que ocultaba h1 en mobile (dependía de imágenes de título del sitio original).
   - `theme.config.tsx`: logo y branding "Cómo entrenar a tu IA", footer Anfibia Escuela + crédito a Carl Vellotti (CC BY-NC-ND), feedback link de Carl eliminado, `project`/`docsRepositoryBase` eliminados, SEO/OG en español, `nextThemes.defaultTheme: 'system'` (antes forzaba dark), `primaryHue: 0` + `primarySaturation: 0`. OG image ahora solo se emite si la página define `ogImage` en frontmatter (la imagen del autor ya no se usa; crear una propia es pendiente opcional).
   - `next-sitemap.config.js`: siteUrl → placeholder `https://como-entrenar-a-tu-ia.vercel.app` (LINK-PENDIENTE, sync con theme.config.tsx), prioridades ajustadas a /clase y /verticales.
-- [ ] **Fase 5 · Verificación**: npm install, npm run dev, build, revisar restos de inglés/TaskFlow/Basecamp. Verificar en especial que Nextra 3.2.3 no proteste por claves de theme.config (`useNextSeoProps`, `nextThemes`, `primaryHue`) y que el look B&N funcione en dark y light.
+- [x] **Fase 5 · Verificación**: COMPLETA. `npm install` (471 paquetes) + `npm run build` verde: 46 rutas, sitemap OK, Pagefind indexa 37 páginas en español. Sitio servido desde `out/` y revisado en browser en dark y light. Bugs encontrados y arreglados en esta fase:
+  - `pages/antes-de-empezar/primer-arranque.mdx`: comentario HTML `<!-- -->` rompía el build (MDX no lo soporta). Ahora es `{/* */}`.
+  - Strings del theme de Nextra que quedaban en inglés ("Search documentation…", "On This Page", "Scroll to top", Light/Dark/System): traducidos vía `search`, `toc`, `themeSwitch` en theme.config.tsx.
+  - `<title>` duplicaba el nombre del sitio en 9 páginas que ya lo traen en el frontmatter: el head ahora solo lo agrega si falta. Se eliminó `useNextSeoProps` (es de Nextra 2, no hacía nada en 3).
+  - JetBrains Mono no se aplicaba (las clases Tailwind de Nextra ganaban): la regla de `code, pre` ahora lleva `!important`.
+  - `notFound` del theme linkeaba a un issue del repo de Carl: apagado y reemplazado por `pages/404.mdx` en español.
+  - `pages/_document.jsx`: `lang="en"` → `lang="es"` (Pagefind indexaba como inglés) y se eliminaron los pixels de Meta/LinkedIn/X del autor.
+  - Limpieza: borrados `DEPLOY.md` (instrucciones con paths de Carl), `README.md` reescrito, y todo `public/` salvo los favicons (imágenes, video, zips y cheatsheet HTML del autor, ~19 MB; ninguna estaba referenciada desde el contenido).
+  - Barrida de TaskFlow / Basecamp / inherited-chaos / lesson-modules / start-X-Y: sin restos. Las 2 menciones a ccforeveryone.com que quedan son los créditos a Carl (a propósito).
 
 ## Navegación aprobada
 
@@ -63,11 +71,13 @@ Recursos                  → recap por clase, cheat sheet, glosario
 
 ## Próximo paso concreto
 
-**Fase 5 · Verificación**:
-- `npm install` y `npm run dev`: revisar consola por warnings de theme.config (Nextra 3.2.3) y mirar el sitio en dark y light.
-- `npm run build` (incluye next-sitemap + pagefind en postbuild).
-- Barrida final de restos de inglés / TaskFlow / Basecamp / "CC for Everyone" en pages/ y public/ (favicon y /images/ siguen siendo los del autor original: decidir si se reemplazan).
-- Pendientes de contenido: LINK-PENDIENTE del zip de materiales, y revisar que `pages/_meta.ts` tenga todas las secciones.
+El taller está terminado y buildea. Lo que queda son decisiones de Thiago, no trabajo pendiente de código:
+
+1. **Publicar el repo y deployar** (Vercel/Netlify/GitHub Pages: build `npm run build`, output `out/`). Nada está pusheado todavía: main tiene 14 commits locales.
+2. **Definir la URL final** y actualizarla en dos lugares: `SITE_URL` en `theme.config.tsx` y `siteUrl` en `next-sitemap.config.js` (hoy ambos con placeholder).
+3. **LINK-PENDIENTE del zip de materiales**: en `pages/antes-de-empezar/primer-arranque.mdx` (y mención en la landing). Sale de publicar `course-materials/` como release o zip. La carpeta que descarga el alumno se llama `taller-ia`.
+4. **Favicon**: `public/favicon.ico` y `favicon.png` siguen siendo los de Carl. Reemplazar por uno de Anfibia.
+5. **Opcional**: placa OG propia (hoy no se emite `og:image` salvo que una página declare `ogImage` en el frontmatter) y convertir `recursos-graficos/placa-newsletter.svg` a PNG/JPG si se quiere practicar pegar una imagen real.
 
 ## Convenciones fijadas (respetar en todo el contenido)
 
@@ -91,4 +101,5 @@ Recursos                  → recap por clase, cheat sheet, glosario
 - `b3499ec` feat: materiales de práctica Cimarrón (9a)
 - `cac460e` feat: guiones interactivos /clase-X-Y en español, escenario Cimarrón (9b)
 - `5e39412` chore: limpieza de infra del autor original (unidad 10)
-- (siguiente) feat: rediseño visual B&N + rebranding (fase 4)
+- `4cfacc8` feat: rediseño visual B&N + rebranding (fase 4)
+- (siguiente) fix: build verde, theme en español y limpieza de assets (fase 5)
