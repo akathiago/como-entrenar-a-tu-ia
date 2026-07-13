@@ -1,7 +1,7 @@
 ---
 title: '3.4 Deploy: tu URL real | Clase 3'
-description: 'Publicá tu proyecto en internet con Vercel y conseguí una URL real para compartir. Deploy explicado para no programadores.'
-keywords: 'deploy vercel español, publicar sitio web ia, hosting gratis vercel, deploy explicado principiantes'
+description: 'Publicá tu proyecto en internet importando tu repo de GitHub en Vercel o Netlify, y conseguí una URL real para compartir. Deploy explicado para no programadores.'
+keywords: 'deploy vercel español, deploy netlify, publicar sitio web ia, hosting gratis, deploy explicado principiantes'
 ---
 
 ## 3.4 · Deploy: tu URL real
@@ -20,44 +20,49 @@ Es EL momento. Todo lo anterior era ensayo: esto es el estreno.
 
 Servidores que corren tu proyecto las 24 horas y atienden a los visitantes. No los administrás vos: el servicio de hosting se encarga de todo. Vos solo entregás el código.
 
-## Qué es Vercel
+## Dónde publicar
 
-El servicio de hosting que usamos en el taller:
+Hay varios servicios y son parecidos: gratis para proyectos personales, se conectan a GitHub y republican solos cuando subís un cambio.
 
-- **Gratis** para proyectos personales (el plan free es generoso)
-- **Hecho por los creadores de Next.js**: se llevan perfecto
-- **Conectado a GitHub**: se actualiza solo cuando subís cambios
+| Servicio | Por qué |
+|----------|---------|
+| **[Vercel](https://vercel.com)** | El que usamos por defecto. Hecho por los creadores de Next.js, que es con lo que construimos. |
+| **[Netlify](https://netlify.com)** | Funciona igual de bien, el paso a paso es casi idéntico. |
+| Otros | Cualquiera que conecte con GitHub sirve. No te cases con ninguno. |
 
-Le das tu repo de GitHub → construye tu proyecto → te da una URL tipo `tuproyecto.vercel.app`.
+## El paso clave: importás vos el repo
+
+Este paso lo hacés **vos, con el mouse, en el navegador**. No es un capricho: importar el repo es lo que deja tu proyecto **conectado a GitHub**, y esa conexión es la que hace que después se republique solo. Si el deploy se hace por otro lado, esa conexión no existe y el auto-deploy no funciona.
+
+1. Entrá a **vercel.com/new** (o a **app.netlify.com**).
+2. **Iniciá sesión con GitHub**, con la misma cuenta donde subiste el proyecto.
+3. Dale **permiso para ver tus repositorios**. Tu repo es privado: sin este permiso no lo va a encontrar. Podés darle acceso a todos o solo a este.
+4. **Buscá tu repo en la lista e importalo.**
+5. No toques la configuración: viene detectada sola. **Deploy.**
+6. Esperá el minuto que tarda en construir.
+
+Y sale la URL. Esa es tuya.
 
 ## La magia del auto-deploy
 
-Después de la configuración inicial:
+Como el repo quedó conectado, de acá en adelante:
 
 1. Cambiás algo en tu proyecto
 2. Le pedís a Claude que lo suba a GitHub
-3. Vercel detecta el cambio y republica solo
+3. El servicio detecta el cambio y republica solo
 4. Tu sitio se actualiza en un minuto
 
-Sin pasos manuales. Cambio → push → está online.
-
-## El pedido completo
-
-```
-Publicá este proyecto en Vercel. Guiame con la autenticación si hace falta.
-```
-
-Claude usa el Vercel CLI y te va llevando. Igual que con GitHub, autenticás una vez por el navegador y no lo pensás más.
+Sin pasos manuales, sin volver a entrar al dashboard. Cambio → push → está online.
 
 ## Problemas típicos
 
 | Problema | Solución |
 |----------|----------|
-| "vercel: command not found" | Falta el CLI: pedile a Claude que lo instale (`npm i -g vercel`) |
-| Falló la autenticación | `vercel login` de nuevo y completá el paso del navegador |
-| Build failed | Copiale a Claude el error del dashboard de Vercel: casi siempre lo arregla solo |
+| Mi repo no aparece en la lista | Es el permiso: volvé a autorizar el acceso a los repositorios. Es privado, por eso no se ve solo. |
+| Build failed | Copiale a Claude el log de error del dashboard: casi siempre lo arregla solo. |
 | El sitio muestra la versión vieja | Está terminando de construir. Esperá un minuto y refrescá. |
-| Funciona en localhost pero no en Vercel | Pedile a Claude que revise los build logs de Vercel |
+| Funciona en localhost pero no online | Pedile a Claude que revise los build logs del dashboard. |
+| Subí un cambio y no se republicó | El repo quedó sin conectar. Revisá en el dashboard que el proyecto muestre tu repo de GitHub como origen. |
 
 ## Después del estreno
 
@@ -73,7 +78,7 @@ Claude usa el Vercel CLI y te va llevando. Igual que con GitHub, autenticás una
 | **Construir** | Claude lo crea |
 | **Iterar** | Afinar con capturas hasta que te guste |
 | **Guardar** | Respaldar en GitHub |
-| **Publicar** | Deploy en Vercel, URL real |
+| **Publicar** | Importar el repo en el hosting, URL real |
 
 Este circuito sirve para cualquier proyecto de cualquier vertical. Ya no es teoría: lo acabás de hacer.
 
